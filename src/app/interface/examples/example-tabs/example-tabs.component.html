@@ -1,0 +1,196 @@
+<main class="container-fluid">
+  <h1>Exemplo de uso tabs</h1>
+
+    <div class="row  mt-3">
+        <div class="col-12">
+            <div class="tab tab-start">
+                <!-- Nav tabs -->
+                <ul class="tab-nav">
+                  <li class="nav-item" [ngClass]="{'active': activeTabStart === '1'}">
+                    <a class="nav-link" [routerLink]="" (click)="selectTabStart('1')">Tab 01</a>
+                  </li>
+                  <li class="nav-item" [ngClass]="{'active': activeTabStart === '2'}">
+                    <a class="nav-link" [routerLink]="" (click)="selectTabStart('2')">Tab 02</a>
+                  </li>
+                  <li class="nav-item" [ngClass]="{'active': activeTabStart === '3'}">
+                    <a class="nav-link" [routerLink]="" (click)="selectTabStart('3')">Tab 03</a>
+                  </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div *ngIf="activeTabStart === '1'">
+                        <h3>Section S1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius, mi eros viverra massa.</p>
+                    </div>
+                    <div *ngIf="activeTabStart === '2'">
+                        <h3>Section S2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius, mi eros viverra massa.</p>
+                    </div>
+                    <div *ngIf="activeTabStart === '3'">
+                        <h3>Section S3</h3>
+                        <p>
+                          Est litora lobortis velit vivamus condimentum habitant quisque eget. Non lectus ornare in sapien feugiat donec magna. Sollicitudin tincidunt magna dignissim tortor luctus augue mi enim dui mattis porta interdum. Dictumst mollis rhoncus commodo ultricies congue placerat dolor. Luctus litora tellus dignissim parturient rutrum parturient aliquam himenaeos cubilia sed mauris! Condimentum dignissim bibendum netus, elit amet himenaeos. Laoreet euismod sit ridiculus integer tempus inceptos placerat dictumst. Nostra hendrerit urna urna commodo quisque. Donec adipiscing dolor pharetra netus magna. Velit massa erat rutrum gravida, auctor vestibulum.
+                          </p>
+                          <p>
+                          Rutrum mus metus eleifend! Sed curabitur convallis elementum at phasellus. Justo dictum sapien penatibus. Class netus et montes. Nibh dictumst lectus hac pellentesque vel urna ultrices feugiat aliquet viverra ridiculus? Convallis tellus integer blandit eleifend praesent imperdiet ridiculus. Nisi fermentum erat, pretium massa a cras. Senectus, sollicitudin primis ultricies rhoncus. Netus ipsum turpis senectus sociis ornare erat per fringilla per. Nullam laoreet nam magna! Dignissim luctus torquent potenti etiam montes ultricies nibh imperdiet libero sed. Parturient euismod curae; velit mus! Molestie malesuada euismod ut lobortis tempor ut integer blandit amet! Aptent.
+                          </p>
+                          <p>
+                          Velit rhoncus sociis placerat? Quis hac gravida porttitor integer aenean non odio odio sem ipsum? Bibendum fringilla id urna fusce fringilla arcu eleifend risus maecenas tristique donec. Massa porttitor sed diam eros varius hac nullam habitant dolor tortor. Blandit mollis malesuada mattis elementum molestie. Suscipit odio pellentesque a cum. Auctor consequat sociosqu neque primis eget congue gravida dapibus proin metus aenean phasellus. Nec sit morbi nascetur parturient magnis est rhoncus pulvinar nostra ad natoque! Dignissim elementum vehicula fringilla in. Ante aliquet sem magna himenaeos. Nascetur mattis sit blandit in.
+                          </p>
+                          <p>
+                          Porta morbi penatibus facilisis in quam auctor lacus. Amet mi odio morbi feugiat dapibus, aptent mollis purus nunc lacus ullamcorper ligula. Vestibulum, risus ad phasellus tellus sociosqu commodo ad convallis. Lectus tempor, curae; semper ornare gravida faucibus ut posuere placerat eu. Parturient iaculis enim erat arcu duis euismod platea! Lobortis lobortis adipiscing elit. Mus ac augue pellentesque. Dis hendrerit pellentesque viverra nec erat taciti interdum sociosqu urna dapibus cras. Imperdiet platea, adipiscing felis faucibus per. Sagittis amet id nascetur ridiculus consequat tellus himenaeos lobortis. Aenean porttitor donec, vulputate placerat?
+                          </p>
+                          <p>
+                          Luctus vehicula, nulla magna duis ad at sem. Congue nisl cursus senectus per senectus. Mollis platea lacus nulla mauris. Cubilia mattis cursus lectus, nibh praesent a. Aptent semper fermentum sit. Sociis tellus sem mauris mattis, tortor diam libero sapien. Eros, pulvinar ultricies convallis vivamus aliquet aliquet. Faucibus ut sociosqu vel dictum odio semper malesuada ligula ullamcorper. Sagittis facilisis class orci nec adipiscing molestie curabitur luctus risus.
+                          </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-12">
+        <div class="tab tab-end">
+            <!-- Nav tabs -->
+            <ul class="tab-nav">
+              <li class="nav-item" [ngClass]="{'active': activeTabEnd === '1'}">
+                <a class="nav-link" [routerLink]="" (click)="selectTabEnd('1')">Tab 01</a>
+              </li>
+              <li class="nav-item" [ngClass]="{'active': activeTabEnd === '2'}">
+                <a class="nav-link" [routerLink]="" (click)="selectTabEnd('2')">Tab 02</a>
+              </li>
+              <li class="nav-item" [ngClass]="{'active': activeTabEnd === '3'}">
+                <a class="nav-link" [routerLink]="" (click)="selectTabEnd('3')">Tab 03</a>
+              </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div *ngIf="activeTabEnd === '1'">
+                    <h3>Section E1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius, mi eros viverra massa.</p>
+                </div>
+                <div *ngIf="activeTabEnd === '2'">
+                    <h3>Section E2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius, mi eros viverra massa.</p>
+                </div>
+                <div *ngIf="activeTabEnd === '3'">
+                    <h3>Section E3</h3>
+                    <p>
+                      Est litora lobortis velit vivamus condimentum habitant quisque eget. Non lectus ornare in sapien feugiat donec magna. Sollicitudin tincidunt magna dignissim tortor luctus augue mi enim dui mattis porta interdum. Dictumst mollis rhoncus commodo ultricies congue placerat dolor. Luctus litora tellus dignissim parturient rutrum parturient aliquam himenaeos cubilia sed mauris! Condimentum dignissim bibendum netus, elit amet himenaeos. Laoreet euismod sit ridiculus integer tempus inceptos placerat dictumst. Nostra hendrerit urna urna commodo quisque. Donec adipiscing dolor pharetra netus magna. Velit massa erat rutrum gravida, auctor vestibulum.
+                      </p>
+                      <p>
+                      Rutrum mus metus eleifend! Sed curabitur convallis elementum at phasellus. Justo dictum sapien penatibus. Class netus et montes. Nibh dictumst lectus hac pellentesque vel urna ultrices feugiat aliquet viverra ridiculus? Convallis tellus integer blandit eleifend praesent imperdiet ridiculus. Nisi fermentum erat, pretium massa a cras. Senectus, sollicitudin primis ultricies rhoncus. Netus ipsum turpis senectus sociis ornare erat per fringilla per. Nullam laoreet nam magna! Dignissim luctus torquent potenti etiam montes ultricies nibh imperdiet libero sed. Parturient euismod curae; velit mus! Molestie malesuada euismod ut lobortis tempor ut integer blandit amet! Aptent.
+                      </p>
+                      <p>
+                      Velit rhoncus sociis placerat? Quis hac gravida porttitor integer aenean non odio odio sem ipsum? Bibendum fringilla id urna fusce fringilla arcu eleifend risus maecenas tristique donec. Massa porttitor sed diam eros varius hac nullam habitant dolor tortor. Blandit mollis malesuada mattis elementum molestie. Suscipit odio pellentesque a cum. Auctor consequat sociosqu neque primis eget congue gravida dapibus proin metus aenean phasellus. Nec sit morbi nascetur parturient magnis est rhoncus pulvinar nostra ad natoque! Dignissim elementum vehicula fringilla in. Ante aliquet sem magna himenaeos. Nascetur mattis sit blandit in.
+                      </p>
+                      <p>
+                      Porta morbi penatibus facilisis in quam auctor lacus. Amet mi odio morbi feugiat dapibus, aptent mollis purus nunc lacus ullamcorper ligula. Vestibulum, risus ad phasellus tellus sociosqu commodo ad convallis. Lectus tempor, curae; semper ornare gravida faucibus ut posuere placerat eu. Parturient iaculis enim erat arcu duis euismod platea! Lobortis lobortis adipiscing elit. Mus ac augue pellentesque. Dis hendrerit pellentesque viverra nec erat taciti interdum sociosqu urna dapibus cras. Imperdiet platea, adipiscing felis faucibus per. Sagittis amet id nascetur ridiculus consequat tellus himenaeos lobortis. Aenean porttitor donec, vulputate placerat?
+                      </p>
+                      <p>
+                      Luctus vehicula, nulla magna duis ad at sem. Congue nisl cursus senectus per senectus. Mollis platea lacus nulla mauris. Cubilia mattis cursus lectus, nibh praesent a. Aptent semper fermentum sit. Sociis tellus sem mauris mattis, tortor diam libero sapien. Eros, pulvinar ultricies convallis vivamus aliquet aliquet. Faucibus ut sociosqu vel dictum odio semper malesuada ligula ullamcorper. Sagittis facilisis class orci nec adipiscing molestie curabitur luctus risus.
+                      </p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row  mt-3">
+      <div class="col-12">
+          <div class="tab tab-top">
+              <!-- Nav tabs -->
+              <ul class="tab-nav">
+                <li class="nav-item" [ngClass]="{'active': activeTabTop === '1'}">
+                  <a class="nav-link" [routerLink]="" (click)="selectTabTop('1')">Tab 01</a>
+                </li>
+                <li class="nav-item" [ngClass]="{'active': activeTabTop === '2'}">
+                  <a class="nav-link" [routerLink]="" (click)="selectTabTop('2')">Tab 02</a>
+                </li>
+                <li class="nav-item" [ngClass]="{'active': activeTabTop === '3'}">
+                  <a class="nav-link" [routerLink]="" (click)="selectTabTop('3')">Tab 03</a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                  <div *ngIf="activeTabTop === '1'">
+                      <h3>Section T1</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius, mi eros viverra massa.</p>
+                  </div>
+                  <div *ngIf="activeTabTop === '2'">
+                      <h3>Section T2</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius, mi eros viverra massa.</p>
+                  </div>
+                  <div *ngIf="activeTabTop === '3'">
+                      <h3>Section T3</h3>
+                      <p>
+                        Est litora lobortis velit vivamus condimentum habitant quisque eget. Non lectus ornare in sapien feugiat donec magna. Sollicitudin tincidunt magna dignissim tortor luctus augue mi enim dui mattis porta interdum. Dictumst mollis rhoncus commodo ultricies congue placerat dolor. Luctus litora tellus dignissim parturient rutrum parturient aliquam himenaeos cubilia sed mauris! Condimentum dignissim bibendum netus, elit amet himenaeos. Laoreet euismod sit ridiculus integer tempus inceptos placerat dictumst. Nostra hendrerit urna urna commodo quisque. Donec adipiscing dolor pharetra netus magna. Velit massa erat rutrum gravida, auctor vestibulum.
+                        </p>
+                        <p>
+                        Rutrum mus metus eleifend! Sed curabitur convallis elementum at phasellus. Justo dictum sapien penatibus. Class netus et montes. Nibh dictumst lectus hac pellentesque vel urna ultrices feugiat aliquet viverra ridiculus? Convallis tellus integer blandit eleifend praesent imperdiet ridiculus. Nisi fermentum erat, pretium massa a cras. Senectus, sollicitudin primis ultricies rhoncus. Netus ipsum turpis senectus sociis ornare erat per fringilla per. Nullam laoreet nam magna! Dignissim luctus torquent potenti etiam montes ultricies nibh imperdiet libero sed. Parturient euismod curae; velit mus! Molestie malesuada euismod ut lobortis tempor ut integer blandit amet! Aptent.
+                        </p>
+                        <p>
+                        Velit rhoncus sociis placerat? Quis hac gravida porttitor integer aenean non odio odio sem ipsum? Bibendum fringilla id urna fusce fringilla arcu eleifend risus maecenas tristique donec. Massa porttitor sed diam eros varius hac nullam habitant dolor tortor. Blandit mollis malesuada mattis elementum molestie. Suscipit odio pellentesque a cum. Auctor consequat sociosqu neque primis eget congue gravida dapibus proin metus aenean phasellus. Nec sit morbi nascetur parturient magnis est rhoncus pulvinar nostra ad natoque! Dignissim elementum vehicula fringilla in. Ante aliquet sem magna himenaeos. Nascetur mattis sit blandit in.
+                        </p>
+                        <p>
+                        Porta morbi penatibus facilisis in quam auctor lacus. Amet mi odio morbi feugiat dapibus, aptent mollis purus nunc lacus ullamcorper ligula. Vestibulum, risus ad phasellus tellus sociosqu commodo ad convallis. Lectus tempor, curae; semper ornare gravida faucibus ut posuere placerat eu. Parturient iaculis enim erat arcu duis euismod platea! Lobortis lobortis adipiscing elit. Mus ac augue pellentesque. Dis hendrerit pellentesque viverra nec erat taciti interdum sociosqu urna dapibus cras. Imperdiet platea, adipiscing felis faucibus per. Sagittis amet id nascetur ridiculus consequat tellus himenaeos lobortis. Aenean porttitor donec, vulputate placerat?
+                        </p>
+                        <p>
+                        Luctus vehicula, nulla magna duis ad at sem. Congue nisl cursus senectus per senectus. Mollis platea lacus nulla mauris. Cubilia mattis cursus lectus, nibh praesent a. Aptent semper fermentum sit. Sociis tellus sem mauris mattis, tortor diam libero sapien. Eros, pulvinar ultricies convallis vivamus aliquet aliquet. Faucibus ut sociosqu vel dictum odio semper malesuada ligula ullamcorper. Sagittis facilisis class orci nec adipiscing molestie curabitur luctus risus.
+                        </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="row  mt-3">
+    <div class="col-12">
+        <div class="tab tab-bottom">
+            <!-- Nav tabs -->
+            <ul class="tab-nav">
+              <li class="nav-item" [ngClass]="{'active': activeTabBottom === '1'}">
+                <a class="nav-link" [routerLink]="" (click)="selectTabBottom('1')">Tab 01</a>
+              </li>
+              <li class="nav-item" [ngClass]="{'active': activeTabBottom === '2'}">
+                <a class="nav-link" [routerLink]="" (click)="selectTabBottom('2')">Tab 02</a>
+              </li>
+              <li class="nav-item" [ngClass]="{'active': activeTabBottom === '3'}">
+                <a class="nav-link" [routerLink]="" (click)="selectTabBottom('3')">Tab 03</a>
+              </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div *ngIf="activeTabBottom === '1'">
+                    <h3>Section B1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius, mi eros viverra massa.</p>
+                </div>
+                <div *ngIf="activeTabBottom === '2'">
+                    <h3>Section B2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper, magna a ultricies volutpat, mi eros viverra massa, vitae consequat nisi justo in tortor. Proin accumsan felis ac felis dapibus, non iaculis mi varius, mi eros viverra massa.</p>
+                </div>
+                <div *ngIf="activeTabBottom === '3'">
+                    <h3>Section B3</h3>
+                    <p>
+                      Est litora lobortis velit vivamus condimentum habitant quisque eget. Non lectus ornare in sapien feugiat donec magna. Sollicitudin tincidunt magna dignissim tortor luctus augue mi enim dui mattis porta interdum. Dictumst mollis rhoncus commodo ultricies congue placerat dolor. Luctus litora tellus dignissim parturient rutrum parturient aliquam himenaeos cubilia sed mauris! Condimentum dignissim bibendum netus, elit amet himenaeos. Laoreet euismod sit ridiculus integer tempus inceptos placerat dictumst. Nostra hendrerit urna urna commodo quisque. Donec adipiscing dolor pharetra netus magna. Velit massa erat rutrum gravida, auctor vestibulum.
+                      </p>
+                      <p>
+                      Rutrum mus metus eleifend! Sed curabitur convallis elementum at phasellus. Justo dictum sapien penatibus. Class netus et montes. Nibh dictumst lectus hac pellentesque vel urna ultrices feugiat aliquet viverra ridiculus? Convallis tellus integer blandit eleifend praesent imperdiet ridiculus. Nisi fermentum erat, pretium massa a cras. Senectus, sollicitudin primis ultricies rhoncus. Netus ipsum turpis senectus sociis ornare erat per fringilla per. Nullam laoreet nam magna! Dignissim luctus torquent potenti etiam montes ultricies nibh imperdiet libero sed. Parturient euismod curae; velit mus! Molestie malesuada euismod ut lobortis tempor ut integer blandit amet! Aptent.
+                      </p>
+                      <p>
+                      Velit rhoncus sociis placerat? Quis hac gravida porttitor integer aenean non odio odio sem ipsum? Bibendum fringilla id urna fusce fringilla arcu eleifend risus maecenas tristique donec. Massa porttitor sed diam eros varius hac nullam habitant dolor tortor. Blandit mollis malesuada mattis elementum molestie. Suscipit odio pellentesque a cum. Auctor consequat sociosqu neque primis eget congue gravida dapibus proin metus aenean phasellus. Nec sit morbi nascetur parturient magnis est rhoncus pulvinar nostra ad natoque! Dignissim elementum vehicula fringilla in. Ante aliquet sem magna himenaeos. Nascetur mattis sit blandit in.
+                      </p>
+                      <p>
+                      Porta morbi penatibus facilisis in quam auctor lacus. Amet mi odio morbi feugiat dapibus, aptent mollis purus nunc lacus ullamcorper ligula. Vestibulum, risus ad phasellus tellus sociosqu commodo ad convallis. Lectus tempor, curae; semper ornare gravida faucibus ut posuere placerat eu. Parturient iaculis enim erat arcu duis euismod platea! Lobortis lobortis adipiscing elit. Mus ac augue pellentesque. Dis hendrerit pellentesque viverra nec erat taciti interdum sociosqu urna dapibus cras. Imperdiet platea, adipiscing felis faucibus per. Sagittis amet id nascetur ridiculus consequat tellus himenaeos lobortis. Aenean porttitor donec, vulputate placerat?
+                      </p>
+                      <p>
+                      Luctus vehicula, nulla magna duis ad at sem. Congue nisl cursus senectus per senectus. Mollis platea lacus nulla mauris. Cubilia mattis cursus lectus, nibh praesent a. Aptent semper fermentum sit. Sociis tellus sem mauris mattis, tortor diam libero sapien. Eros, pulvinar ultricies convallis vivamus aliquet aliquet. Faucibus ut sociosqu vel dictum odio semper malesuada ligula ullamcorper. Sagittis facilisis class orci nec adipiscing molestie curabitur luctus risus.
+                      </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>

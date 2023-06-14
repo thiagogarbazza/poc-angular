@@ -1,2 +1,10 @@
 @import './vendor/vendor';
 
+@import './themes/theme-dark.scss';
+@import './themes/theme-light.scss';
+
+@import './tab';
+
+body {
+  font-size: 1.6rem;
+}
