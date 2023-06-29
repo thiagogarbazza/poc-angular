@@ -1,0 +1,28 @@
+.input-container .label-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-container .form-label {
+  margin-bottom: 0;
+  opacity: 0.5;
+  font-weight: 450;
+}
+
+.input-container .input-help {
+  cursor: pointer;
+}
+
+.input-container .input-help .ng-fa-icon {
+  opacity: 0.5;
+}
+
+.input-container .input-help .ng-fa-icon:focus,
+.input-container .input-help .ng-fa-icon:hover {
+  cursor: pointer;
+  --bs-text-opacity: 0.5;
+  color: rgba(var(--bs-info-rgb), var(--bs-text-opacity)) !important;
+}

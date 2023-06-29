@@ -1,0 +1,9 @@
+<div *ngIf="control && control.invalid && (control.touched || control.dirty)" class="feedback text-danger text-small">
+  <small *ngIf="control.errors.mask">Campo inválido.</small>
+  <small *ngIf="control.errors.ngbDate">Data inválida.</small>
+  <small *ngIf="control.errors.max">Campo deve ser no máximo {{control.errors.max.max}}.</small>
+  <small *ngIf="control.errors.maxlength">Campo deve ter no máximo {{control.errors.maxlength.requiredLength}} caracteres.</small>
+  <small *ngIf="control.errors.min">Campo deve ser no mínimo {{control.errors.min.min}}.</small>
+  <small *ngIf="control.errors.minlength">Campo deve ter no mínimo {{control.errors.minlength.requiredLength}} caracteres.</small>
+  <small *ngIf="control.errors.required">Campo obrigatório.</small>
+</div>
