@@ -6,9 +6,11 @@ import { InputTextComponent } from './form/input-fields/input-text/input-text.co
 import { InputTextAreaComponent } from './form/input-fields/input-text-area/input-text-area.component';
 import { InvalidFeedbackComponent } from './form/invalid-feedback/invalid-feedback.component';
 import { InputNumberComponent } from './form/input-fields/input-number/input-number.component';
+import { InputSwitchComponent } from './form/input-fields/input-switch/input-switch.component';
 
 const COMPONENTS = [
   InputNumberComponent,
+  InputSwitchComponent,
   InputTextComponent,
   InputTextAreaComponent,
   InvalidFeedbackComponent,

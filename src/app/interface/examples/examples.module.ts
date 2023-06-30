@@ -8,11 +8,13 @@ import { ExampleInputsTemplateComponent } from './example-inputs/example-inputs-
 import { ExampleInputNumberComponent } from './example-inputs/example-input-number/example-input-number.component';
 import { ExampleInputTextAreaComponent } from './example-inputs/example-input-text-area/example-input-text-area.component';
 import { ExampleInputTextComponent } from './example-inputs/example-input-text/example-input-text.component';
+import { ExampleInputSwitchComponent } from './example-inputs/example-input-switch/example-input-switch.component';
 
 @NgModule({
   declarations: [
     ExampleInputsTemplateComponent,
     ExampleInputNumberComponent,
+    ExampleInputSwitchComponent,
     ExampleInputTextComponent,
     ExampleInputTextAreaComponent,
     ExampleTabsComponent
