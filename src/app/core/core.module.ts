@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome'
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
 
 import { InputTextComponent } from './form/input-fields/input-text/input-text.component';
 import { InputTextAreaComponent } from './form/input-fields/input-text-area/input-text-area.component';
@@ -33,17 +36,21 @@ const MODULES = [
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule,
     //...MODULES
   ],
   exports: [
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
     //...MODULES
     ...COMPONENTS
   ]
 })
 export class CoreModule {
 
-
+  constructor(faIconLibrary: FaIconLibrary) {
+    faIconLibrary.addIconPacks(fas, far);
+  }
 }
