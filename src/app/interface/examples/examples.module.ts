@@ -9,6 +9,7 @@ import { ExampleInputNumberComponent } from './example-inputs/example-input-numb
 import { ExampleInputTextAreaComponent } from './example-inputs/example-input-text-area/example-input-text-area.component';
 import { ExampleInputTextComponent } from './example-inputs/example-input-text/example-input-text.component';
 import { ExampleInputSwitchComponent } from './example-inputs/example-input-switch/example-input-switch.component';
+import { ExampleInputUrlComponent } from './example-inputs/example-input-url/example-input-url.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ExampleInputSwitchComponent } from './example-inputs/example-input-swit
     ExampleInputSwitchComponent,
     ExampleInputTextComponent,
     ExampleInputTextAreaComponent,
+    ExampleInputUrlComponent,
     ExampleTabsComponent
   ],
   imports: [
