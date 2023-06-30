@@ -1,0 +1,25 @@
+<div class="form-group input-container input-date"
+  [formGroup]="formGroup"
+  [ngClass]="{'is-invalid': isInvalid(), 'is-valid': isValid()}"
+  >
+  <div class="label-group">
+    <label class="form-label" [for]="formControlName">{{label}}:<sup class="text-danger input-required" *ngIf="isRequired" title="Este campo é obrigatório">*</sup></label>
+    <span class="input-help"><ng-content select="[help]"></ng-content></span>
+  </div>
+  <div class="input-group has-validation">
+    <ng-content select="[prepend]"></ng-content>
+    <input type="text" class="form-control" autocomplete="off"
+      #input
+      [formControlName]="formControlName"
+      [id]="formControlName" [name]="formControlName"
+      [ngClass]="{'is-invalid': isInvalid(), 'is-valid': isValid()}"
+      [readonly]="readonly"
+      [placeholder]="placeholder"
+      ngbDatepicker #d="ngbDatepicker" [placement]="'button'" [positionTarget]="buttonEl" (dateSelect)="dateSelect()"/>
+    <ng-content select="[append]"></ng-content>
+    <button #buttonEl class="btn btn-outline-secondary" (click)="d.toggle()">
+      <fa-icon help icon="calendar-day" title="Clique aqui para escolher uma data"></fa-icon>
+    </button>
+  </div>
+  <invalid-feedback [control]="control"></invalid-feedback>
+</div>

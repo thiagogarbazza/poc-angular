@@ -10,6 +10,7 @@ import { ExampleInputSwitchComponent } from './example-inputs/example-input-swit
 import { ExampleInputUrlComponent } from './example-inputs/example-input-url/example-input-url.component';
 import { ExampleInputEmailComponent } from './example-inputs/example-input-email/example-input-email.component';
 import { ExampleInputPasswordComponent } from './example-inputs/example-input-password/example-input-password.component';
+import { ExampleInputDateComponent } from './example-inputs/example-input-date/example-input-date.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
     path: 'examples/inputs',
     component: ExampleInputsTemplateComponent,
     children: [
+      { path: 'date', component: ExampleInputDateComponent, data: {activeTab: 'date'}, pathMatch: 'full' },
       { path: 'email', component: ExampleInputEmailComponent, data: {activeTab: 'email'}, pathMatch: 'full' },
       { path: 'number', component: ExampleInputNumberComponent, data: {activeTab: 'number'}, pathMatch: 'full' },
       { path: 'password', component: ExampleInputPasswordComponent, data: {activeTab: 'password'}, pathMatch: 'full' },

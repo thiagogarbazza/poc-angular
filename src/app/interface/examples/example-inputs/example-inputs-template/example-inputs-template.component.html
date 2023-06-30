@@ -3,6 +3,9 @@
 
   <div class="tab tab-start">
     <ul class="tab-nav">
+      <li class="nav-item" [ngClass]="{'active': activeTab === 'date'}">
+        <a class="nav-link" routerLink="/examples/inputs/date">input-date</a>
+      </li>
       <li class="nav-item" [ngClass]="{'active': activeTab === 'email'}">
         <a class="nav-link" routerLink="/examples/inputs/email">input-email</a>
       </li>
