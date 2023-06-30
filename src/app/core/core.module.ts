@@ -8,8 +8,10 @@ import { InvalidFeedbackComponent } from './form/invalid-feedback/invalid-feedba
 import { InputNumberComponent } from './form/input-fields/input-number/input-number.component';
 import { InputSwitchComponent } from './form/input-fields/input-switch/input-switch.component';
 import { InputUrlComponent } from './form/input-fields/input-url/input-url.component';
+import { InputEmailComponent } from './form/input-fields/input-email/input-email.component';
 
 const COMPONENTS = [
+  InputEmailComponent,
   InputNumberComponent,
   InputSwitchComponent,
   InputTextComponent,

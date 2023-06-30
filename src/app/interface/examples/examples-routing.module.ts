@@ -8,6 +8,7 @@ import { ExampleInputTextAreaComponent } from './example-inputs/example-input-te
 import { ExampleInputTextComponent } from './example-inputs/example-input-text/example-input-text.component';
 import { ExampleInputSwitchComponent } from './example-inputs/example-input-switch/example-input-switch.component';
 import { ExampleInputUrlComponent } from './example-inputs/example-input-url/example-input-url.component';
+import { ExampleInputEmailComponent } from './example-inputs/example-input-email/example-input-email.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
     path: 'examples/inputs',
     component: ExampleInputsTemplateComponent,
     children: [
+      { path: 'email', component: ExampleInputEmailComponent, data: {activeTab: 'email'}, pathMatch: 'full' },
       { path: 'number', component: ExampleInputNumberComponent, data: {activeTab: 'number'}, pathMatch: 'full' },
       { path: 'switch', component: ExampleInputSwitchComponent, data: {activeTab: 'switch'}, pathMatch: 'full' },
       { path: 'text', component: ExampleInputTextComponent, data: {activeTab: 'text'}, pathMatch: 'full' },
