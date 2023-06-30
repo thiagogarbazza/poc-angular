@@ -9,10 +9,12 @@ import { InputNumberComponent } from './form/input-fields/input-number/input-num
 import { InputSwitchComponent } from './form/input-fields/input-switch/input-switch.component';
 import { InputUrlComponent } from './form/input-fields/input-url/input-url.component';
 import { InputEmailComponent } from './form/input-fields/input-email/input-email.component';
+import { InputPasswordComponent } from './form/input-fields/input-password/input-password.component';
 
 const COMPONENTS = [
   InputEmailComponent,
   InputNumberComponent,
+  InputPasswordComponent,
   InputSwitchComponent,
   InputTextComponent,
   InputTextAreaComponent,

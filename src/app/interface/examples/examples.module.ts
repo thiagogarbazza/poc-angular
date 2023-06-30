@@ -11,12 +11,14 @@ import { ExampleInputTextComponent } from './example-inputs/example-input-text/e
 import { ExampleInputSwitchComponent } from './example-inputs/example-input-switch/example-input-switch.component';
 import { ExampleInputUrlComponent } from './example-inputs/example-input-url/example-input-url.component';
 import { ExampleInputEmailComponent } from './example-inputs/example-input-email/example-input-email.component';
+import { ExampleInputPasswordComponent } from './example-inputs/example-input-password/example-input-password.component';
 
 @NgModule({
   declarations: [
     ExampleInputsTemplateComponent,
     ExampleInputEmailComponent,
     ExampleInputNumberComponent,
+    ExampleInputPasswordComponent,
     ExampleInputSwitchComponent,
     ExampleInputTextComponent,
     ExampleInputTextAreaComponent,
