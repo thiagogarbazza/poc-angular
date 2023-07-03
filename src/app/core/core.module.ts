@@ -17,8 +17,10 @@ import { InputPasswordComponent } from './form/input-fields/input-password/input
 import { InputDateComponent } from './form/input-fields/input-date/input-date.component';
 import { CustomAdapter, CustomDateParserFormatter } from './form/input-fields/input-date/input-date.formatters';
 import { InputTextEditorComponent } from './form/input-fields/input-text-editor/input-text-editor.component';
+import { InputCodeEditorComponent } from './form/input-fields/input-code-editor/input-code-editor.component';
 
 const COMPONENTS = [
+  InputCodeEditorComponent,
   InputDateComponent,
   InputEmailComponent,
   InputNumberComponent,

@@ -5,6 +5,9 @@
 
   <div class="tab tab-start">
     <ul class="tab-nav">
+      <li class="nav-item" [ngClass]="{'active': activeTab === 'code-editor'}">
+        <a class="nav-link" routerLink="/examples/inputs/code-editor">input-code-editor</a>
+      </li>
       <li class="nav-item" [ngClass]="{'active': activeTab === 'date'}">
         <a class="nav-link" routerLink="/examples/inputs/date">input-date</a>
       </li>
