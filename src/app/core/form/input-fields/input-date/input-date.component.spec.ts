@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InputDateComponent } from './input-date.component';
 
-describe('InputTextComponent', () => {
+describe('InputDateComponent', () => {
   let component: InputDateComponent;
   let fixture: ComponentFixture<InputDateComponent>;
 

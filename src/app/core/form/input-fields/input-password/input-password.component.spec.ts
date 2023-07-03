@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InputPasswordComponent } from './input-password.component';
 
-describe('InputTextComponent', () => {
+describe('InputPasswordComponent', () => {
   let component: InputPasswordComponent;
   let fixture: ComponentFixture<InputPasswordComponent>;
 

@@ -53,7 +53,7 @@ const MODULES = [
     ...COMPONENTS
   ],
   providers: [
-    {provide: NgbDateAdapter, useClass: CustomAdapter},
+    {provide: NgbDateAdapter        , useClass: CustomAdapter},
     {provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter}
   ]
 })
