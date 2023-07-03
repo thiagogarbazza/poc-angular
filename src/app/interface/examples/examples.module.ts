@@ -15,6 +15,7 @@ import { ExampleInputPasswordComponent } from './example-inputs/example-input-pa
 import { ExampleInputDateComponent } from './example-inputs/example-input-date/example-input-date.component';
 import { ExampleInputTextEditorComponent } from './example-inputs/example-input-text-editor/example-input-text-editor.component';
 import { ExampleInputCodeEditorComponent } from './example-inputs/example-input-code-editor/example-input-code-editor.component';
+import { ExampleInputSelectItemComponent } from './example-inputs/example-input-select-item/example-input-select-item.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ExampleInputCodeEditorComponent } from './example-inputs/example-input-
     ExampleInputEmailComponent,
     ExampleInputNumberComponent,
     ExampleInputPasswordComponent,
+    ExampleInputSelectItemComponent,
     ExampleInputSwitchComponent,
     ExampleInputTextComponent,
     ExampleInputTextAreaComponent,

@@ -13,6 +13,7 @@ import { ExampleInputPasswordComponent } from './example-inputs/example-input-pa
 import { ExampleInputDateComponent } from './example-inputs/example-input-date/example-input-date.component';
 import { ExampleInputTextEditorComponent } from './example-inputs/example-input-text-editor/example-input-text-editor.component';
 import { ExampleInputCodeEditorComponent } from './example-inputs/example-input-code-editor/example-input-code-editor.component';
+import { ExampleInputSelectItemComponent } from './example-inputs/example-input-select-item/example-input-select-item.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,7 @@ const routes: Routes = [
       { path: 'email', component: ExampleInputEmailComponent, data: {activeTab: 'email'}, pathMatch: 'full' },
       { path: 'number', component: ExampleInputNumberComponent, data: {activeTab: 'number'}, pathMatch: 'full' },
       { path: 'password', component: ExampleInputPasswordComponent, data: {activeTab: 'password'}, pathMatch: 'full' },
+      { path: 'select-item', component: ExampleInputSelectItemComponent, data: {activeTab: 'select-item'}, pathMatch: 'full' },
       { path: 'switch', component: ExampleInputSwitchComponent, data: {activeTab: 'switch'}, pathMatch: 'full' },
       { path: 'text', component: ExampleInputTextComponent, data: {activeTab: 'text'}, pathMatch: 'full' },
       { path: 'text-area', component: ExampleInputTextAreaComponent, data: {activeTab: 'text-area'}, pathMatch: 'full' },

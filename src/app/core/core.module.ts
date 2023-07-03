@@ -5,6 +5,7 @@ import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontaweso
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { NgbDateAdapter, NgbDateParserFormatter, NgbDatepickerConfig, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgSelectConfig, NgSelectModule } from '@ng-select/ng-select';
 
 import { InputTextComponent } from './form/input-fields/input-text/input-text.component';
 import { InputTextAreaComponent } from './form/input-fields/input-text-area/input-text-area.component';
@@ -19,6 +20,8 @@ import { CustomAdapter, CustomDateParserFormatter } from './form/input-fields/in
 import { InputTextEditorComponent } from './form/input-fields/input-text-editor/input-text-editor.component';
 import { InputCodeEditorComponent } from './form/input-fields/input-code-editor/input-code-editor.component';
 import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
+import { InputSelectItemComponent } from './form/input-fields/input-select-item/input-select-item.component';
+
 
 const COMPONENTS = [
   InputCodeEditorComponent,
@@ -26,6 +29,7 @@ const COMPONENTS = [
   InputEmailComponent,
   InputNumberComponent,
   InputPasswordComponent,
+  InputSelectItemComponent,
   InputSwitchComponent,
   InputTextComponent,
   InputTextAreaComponent,
@@ -48,6 +52,7 @@ const MODULES = [
     ReactiveFormsModule,
     FontAwesomeModule,
     NgbDatepickerModule,
+    NgSelectModule,
     MonacoEditorModule.forRoot() // use forRoot() in main app module only.
     //...MODULES
   ],
@@ -68,13 +73,21 @@ export class CoreModule {
 
   constructor (
     private faIconLibrary: FaIconLibrary,
-    private ngbDatepickerConfig: NgbDatepickerConfig) {
+    private ngbDatepickerConfig: NgbDatepickerConfig,
+    private ngSelectConfig: NgSelectConfig) {
     faIconLibrary.addIconPacks(fas, far);
     CoreModule.ngbDatepickerSetUp(ngbDatepickerConfig);
+    CoreModule.ngSelectSetUp(ngSelectConfig);
   }
 
   private static ngbDatepickerSetUp (config: NgbDatepickerConfig) {
     config.firstDayOfWeek = 7; // Iniciar no domingo.
     config.navigation = 'select';
+  }
+
+  private static ngSelectSetUp (config: NgSelectConfig) {
+    config.appendTo = 'body';
+    config.placeholder = 'Selecionar...';
+    config.notFoundText = 'Nenhum resultado encontrado'
   }
 }

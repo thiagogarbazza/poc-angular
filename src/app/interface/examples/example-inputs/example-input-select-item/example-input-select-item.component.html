@@ -1,0 +1,36 @@
+<form [formGroup]="formGroup" novalidate tabindex="0">
+  <div class="row mb-2">
+    <input-select-item class="col-12" [items]="items" label="Exemplo de uso básico" formControlName="item"></input-select-item>
+  </div>
+  <div class="row mb-2">
+    <input-select-item class="col-12" [items]="items" label="Exemplo com valor inicial" formControlName="itemComValor"></input-select-item>
+  </div>
+  <div class="row mb-2">
+    <input-select-item class="col-12" [items]="items" label="Exemplo com placeholder" formControlName="itemComPlaceholder" placeholder="Placeholder aqui..."></input-select-item>
+  </div>
+  <div class="row mb-2">
+    <input-select-item class="col-12" [items]="items" label="Exemplo desabilitado" formControlName="itemDesabilitado"></input-select-item>
+  </div>
+  <div class="row mb-2">
+    <input-select-item class="col-12" [items]="items" label="Exemplo readonly" formControlName="itemReadonly" [readonly]="true"></input-select-item>
+  </div>
+  <div class="row mb-2">
+    <input-select-item class="col-12" [items]="items" label="Exemplo item obrigatório" formControlName="itemObrigatorio"></input-select-item>
+  </div>
+  <div class="row mb-2">
+    <input-select-item class="col-12" [items]="items" label="Exemplo com 'ajuda preenchida'" formControlName="itemComAjuda">
+      <span help class="form-help text-info" title="Seu conteúdo de ajuda aqui">?</span>
+    </input-select-item>
+  </div>
+  <div class="row mb-2">
+    <input-select-item class="col-12" [items]="items" label="Exemplo com prepend" formControlName="itemComPrepend">
+      <span prepend class="input-group-text">@</span>
+    </input-select-item>
+  </div>
+  <div class="row mb-2">
+    <input-select-item class="col-12" [items]="items" label="Exemplo com append" formControlName="itemComAppend">
+      <span append class="input-group-text">@</span>
+    </input-select-item>
+  </div>
+</form>
+<div class="row m-5 card"><code><pre>{{ formGroup.value | json}}</pre></code></div>
