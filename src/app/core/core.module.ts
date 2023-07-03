@@ -16,6 +16,7 @@ import { InputEmailComponent } from './form/input-fields/input-email/input-email
 import { InputPasswordComponent } from './form/input-fields/input-password/input-password.component';
 import { InputDateComponent } from './form/input-fields/input-date/input-date.component';
 import { CustomAdapter, CustomDateParserFormatter } from './form/input-fields/input-date/input-date.formatters';
+import { InputTextEditorComponent } from './form/input-fields/input-text-editor/input-text-editor.component';
 
 const COMPONENTS = [
   InputDateComponent,
@@ -25,6 +26,7 @@ const COMPONENTS = [
   InputSwitchComponent,
   InputTextComponent,
   InputTextAreaComponent,
+  InputTextEditorComponent,
   InputUrlComponent,
   InvalidFeedbackComponent,
 ];
@@ -42,7 +44,7 @@ const MODULES = [
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    NgbDatepickerModule,
+    NgbDatepickerModule
     //...MODULES
   ],
   exports: [

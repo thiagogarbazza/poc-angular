@@ -1,6 +1,8 @@
 <main class="container">
   <h1>Exemplo de uso inputs</h1>
 
+
+
   <div class="tab tab-start">
     <ul class="tab-nav">
       <li class="nav-item" [ngClass]="{'active': activeTab === 'date'}">
@@ -23,6 +25,9 @@
       </li>
       <li class="nav-item" [ngClass]="{'active': activeTab === 'text-area'}">
         <a class="nav-link" routerLink="/examples/inputs/text-area">input-text-area</a>
+      </li>
+      <li class="nav-item" [ngClass]="{'active': activeTab === 'text-editor'}">
+        <a class="nav-link" routerLink="/examples/inputs/text-editor">input-text-editor</a>
       </li>
       <li class="nav-item" [ngClass]="{'active': activeTab === 'url'}">
         <a class="nav-link" routerLink="/examples/inputs/url">input-url</a>
