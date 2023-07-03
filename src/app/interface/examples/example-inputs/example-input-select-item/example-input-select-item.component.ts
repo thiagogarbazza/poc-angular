@@ -28,6 +28,8 @@ export class ExampleInputSelectItemComponent implements OnInit {
     return this.formBuilder.group({
       item: new FormControl(null, []),
       itemComValor: new FormControl(this.items[1], []),
+      itemMultiplo: new FormControl(null, []),
+      itemMultiploComValor: new FormControl([this.items[1]], []),
       itemComPlaceholder: new FormControl(null, []),
       itemDesabilitado: new FormControl({value: null, disabled: true}, []),
       itemReadonly: new FormControl(null, []),
