@@ -7,15 +7,12 @@
     <span class="input-help"><ng-content select="[help]"></ng-content></span>
   </div>
   <div class="input-group has-validation">
-    <ng-content select="[prepend]"></ng-content>
-    <input type="text" class="form-control" autocomplete="off"
+    <div class="editor-container">
+      <ngx-monaco-editor [options]="options" [formControlName]="formControlName"
       #input
       [formControlName]="formControlName"
-      [id]="formControlName" [name]="formControlName"
-      [ngClass]="{'is-invalid': isInvalid(), 'is-valid': isValid()}"
-      [readonly]="readonly"
-      [placeholder]="placeholder" />
-    <ng-content select="[append]"></ng-content>
+      [ngClass]="{'is-invalid': isInvalid(), 'is-valid': isValid()}"></ngx-monaco-editor>
+    </div>
   </div>
   <invalid-feedback [control]="control"></invalid-feedback>
 </div>

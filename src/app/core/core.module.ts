@@ -18,6 +18,7 @@ import { InputDateComponent } from './form/input-fields/input-date/input-date.co
 import { CustomAdapter, CustomDateParserFormatter } from './form/input-fields/input-date/input-date.formatters';
 import { InputTextEditorComponent } from './form/input-fields/input-text-editor/input-text-editor.component';
 import { InputCodeEditorComponent } from './form/input-fields/input-code-editor/input-code-editor.component';
+import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 
 const COMPONENTS = [
   InputCodeEditorComponent,
@@ -46,13 +47,15 @@ const MODULES = [
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
-    NgbDatepickerModule
+    NgbDatepickerModule,
+    MonacoEditorModule.forRoot() // use forRoot() in main app module only.
     //...MODULES
   ],
   exports: [
     FormsModule,
     ReactiveFormsModule,
     FontAwesomeModule,
+    MonacoEditorModule,
     //...MODULES
     ...COMPONENTS
   ],

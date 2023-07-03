@@ -15,6 +15,6 @@ import { AbstractInputField } from '../abstract-input-field';
 })
 export class InputCodeEditorComponent extends AbstractInputField {
 
-  @Input() placeholder: string = '';
+  @Input() options: any = { theme: 'vs', language: 'javascript', tabSize: 2, minimap: {enabled: false} };
   @ViewChild('input') input: ElementRef;
 }

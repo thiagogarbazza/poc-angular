@@ -19,7 +19,7 @@ export class ExampleInputCodeEditorComponent implements OnInit {
   private criarFormGroup() {
     return this.formBuilder.group({
       item: new FormControl(null, []),
-      itemComValor: new FormControl('Valor já preenchido', []),
+      itemComValor: new FormControl('function x() {\n  console.log("Hello world!");\n}', []),
       itemComPlaceholder: new FormControl(null, []),
       itemDesabilitado: new FormControl({value: null, disabled: true}, []),
       itemReadonly: new FormControl(null, []),
@@ -27,8 +27,6 @@ export class ExampleInputCodeEditorComponent implements OnInit {
       itemComTamanhoMinimo: new FormControl(null, [Validators.minLength(5)]),
       itemComTamanhoMaximo: new FormControl(null, [Validators.maxLength(10)]),
       itemComAjuda: new FormControl(null, []),
-      itemComPrepend: new FormControl(null, []),
-      itemComAppend: new FormControl(null, []),
     });
   }
 }
