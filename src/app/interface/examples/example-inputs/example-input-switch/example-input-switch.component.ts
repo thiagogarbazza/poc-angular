@@ -23,6 +23,7 @@ export class ExampleInputSwitchComponent implements OnInit {
       itemDesabilitado: new FormControl({value: null, disabled: true}, []),
       itemReadonly: new FormControl(null, []),
       itemObrigatorio: new FormControl(null, [Validators.required]),
+      itemReverse: new FormControl(null, []),
       itemComAjuda: new FormControl(null, [])
     });
   }

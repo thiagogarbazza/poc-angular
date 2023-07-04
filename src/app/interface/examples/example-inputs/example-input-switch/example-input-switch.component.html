@@ -15,6 +15,9 @@
     <input-switch class="col-12" label="Exemplo item obrigatório" formControlName="itemObrigatorio" [labelOn]="'True value'" [labelOff]="'False value'"></input-switch>
   </div>
   <div class="row mb-2">
+    <input-switch class="col-12" label="Exemplo reverse" formControlName="itemReverse" [labelOn]="'True value'" [labelOff]="'False value'" [reverse]="true"></input-switch>
+  </div>
+  <div class="row mb-2">
     <input-switch class="col-12" label="Exemplo com 'ajuda preenchida'" formControlName="itemComAjuda" [labelOn]="'True value'" [labelOff]="'False value'">
       <span help class="form-help text-info" title="Seu conteúdo de ajuda aqui">?</span>
     </input-switch>
