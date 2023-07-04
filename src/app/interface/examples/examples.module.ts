@@ -16,9 +16,11 @@ import { ExampleInputDateComponent } from './example-inputs/example-input-date/e
 import { ExampleInputTextEditorComponent } from './example-inputs/example-input-text-editor/example-input-text-editor.component';
 import { ExampleInputCodeEditorComponent } from './example-inputs/example-input-code-editor/example-input-code-editor.component';
 import { ExampleInputSelectItemComponent } from './example-inputs/example-input-select-item/example-input-select-item.component';
+import { ExampleInputCheckboxComponent } from './example-inputs/example-input-checkbox/example-input-checkbox.component';
 
 @NgModule({
   declarations: [
+    ExampleInputCheckboxComponent,
     ExampleInputCodeEditorComponent,
     ExampleInputDateComponent,
     ExampleInputEmailComponent,

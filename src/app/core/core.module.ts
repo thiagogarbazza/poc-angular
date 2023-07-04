@@ -21,9 +21,11 @@ import { InputTextEditorComponent } from './form/input-fields/input-text-editor/
 import { InputCodeEditorComponent } from './form/input-fields/input-code-editor/input-code-editor.component';
 import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 import { InputSelectItemComponent } from './form/input-fields/input-select-item/input-select-item.component';
+import { InputCheckboxComponent } from './form/input-fields/input-checkbox/input-checkbox.component';
 
 
 const COMPONENTS = [
+  InputCheckboxComponent,
   InputCodeEditorComponent,
   InputDateComponent,
   InputEmailComponent,

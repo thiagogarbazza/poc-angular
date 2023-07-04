@@ -14,6 +14,7 @@ import { ExampleInputDateComponent } from './example-inputs/example-input-date/e
 import { ExampleInputTextEditorComponent } from './example-inputs/example-input-text-editor/example-input-text-editor.component';
 import { ExampleInputCodeEditorComponent } from './example-inputs/example-input-code-editor/example-input-code-editor.component';
 import { ExampleInputSelectItemComponent } from './example-inputs/example-input-select-item/example-input-select-item.component';
+import { ExampleInputCheckboxComponent } from './example-inputs/example-input-checkbox/example-input-checkbox.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
     path: 'examples/inputs',
     component: ExampleInputsTemplateComponent,
     children: [
+      { path: 'checkbox', component: ExampleInputCheckboxComponent, data: {activeTab: 'checkbox'}, pathMatch: 'full' },
       { path: 'code-editor', component: ExampleInputCodeEditorComponent, data: {activeTab: 'code-editor'}, pathMatch: 'full' },
       { path: 'date', component: ExampleInputDateComponent, data: {activeTab: 'date'}, pathMatch: 'full' },
       { path: 'email', component: ExampleInputEmailComponent, data: {activeTab: 'email'}, pathMatch: 'full' },
