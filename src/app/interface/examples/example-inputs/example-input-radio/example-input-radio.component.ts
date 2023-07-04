@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import SelectableItem from 'src/app/core/service/selectable-item';
 
 @Component({
-  selector: 'app-example-input-checkbox',
-  templateUrl: './example-input-checkbox.component.html',
-  styleUrls: ['./example-input-checkbox.component.scss']
+  selector: 'app-example-input-radio',
+  templateUrl: './example-input-radio.component.html',
+  styleUrls: ['./example-input-radio.component.scss']
 })
-export class ExampleInputCheckboxComponent implements OnInit {
+export class ExampleInputRadioComponent implements OnInit {
 
   public formGroup: FormGroup;
   public items: Array<SelectableItem<string>> = [
@@ -27,7 +27,7 @@ export class ExampleInputCheckboxComponent implements OnInit {
   private criarFormGroup() {
     return this.formBuilder.group({
       item: new FormControl(null, []),
-      itemComValor: new FormControl([this.items[1]], []),
+      itemComValor: new FormControl(this.items[1], []),
       itemDesabilitado: new FormControl({value: null, disabled: true}, []),
       itemReadonly: new FormControl(null, []),
       itemObrigatorio: new FormControl(null, [Validators.required]),

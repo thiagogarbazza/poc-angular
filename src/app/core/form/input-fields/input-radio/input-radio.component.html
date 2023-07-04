@@ -1,0 +1,23 @@
+<div class="form-group input-container input-radio"
+  [formGroup]="formGroup"
+  [ngClass]="{'is-invalid': isInvalid(), 'is-valid': isValid()}"
+  >
+  <div class="label-group">
+    <label class="form-label" [for]="formControlName">{{label}}:<sup class="text-danger input-required" *ngIf="isRequired" title="Este campo é obrigatório">*</sup></label>
+    <span class="input-help"><ng-content select="[help]"></ng-content></span>
+  </div>
+  <div class="input-group has-validation">
+    <div class="items">
+      <div class="form-check item" *ngFor="let item of items; let i = index;"
+      [ngClass]="{'form-check-reverse': reverse, 'form-check-inline': inline}">
+        <input class="form-check-input" type="radio" role="radio"
+          [formControlName]="formControlName" [value]="item"
+          [id]="formControlName + i" [name]="formControlName"
+          [ngClass]="{'is-invalid': isInvalid()}"
+          [readonly]="readonly">
+        <label class="form-check-label" [for]="formControlName + i">{{item.description}}</label>
+      </div>
+    </div>
+  </div>
+  <invalid-feedback [control]="control"></invalid-feedback>
+</div>

@@ -15,6 +15,7 @@ import { ExampleInputTextEditorComponent } from './example-inputs/example-input-
 import { ExampleInputCodeEditorComponent } from './example-inputs/example-input-code-editor/example-input-code-editor.component';
 import { ExampleInputSelectItemComponent } from './example-inputs/example-input-select-item/example-input-select-item.component';
 import { ExampleInputCheckboxComponent } from './example-inputs/example-input-checkbox/example-input-checkbox.component';
+import { ExampleInputRadioComponent } from './example-inputs/example-input-radio/example-input-radio.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,7 @@ const routes: Routes = [
       { path: 'email', component: ExampleInputEmailComponent, data: {activeTab: 'email'}, pathMatch: 'full' },
       { path: 'number', component: ExampleInputNumberComponent, data: {activeTab: 'number'}, pathMatch: 'full' },
       { path: 'password', component: ExampleInputPasswordComponent, data: {activeTab: 'password'}, pathMatch: 'full' },
+      { path: 'radio', component: ExampleInputRadioComponent, data: {activeTab: 'radio'}, pathMatch: 'full' },
       { path: 'select-item', component: ExampleInputSelectItemComponent, data: {activeTab: 'select-item'}, pathMatch: 'full' },
       { path: 'switch', component: ExampleInputSwitchComponent, data: {activeTab: 'switch'}, pathMatch: 'full' },
       { path: 'text', component: ExampleInputTextComponent, data: {activeTab: 'text'}, pathMatch: 'full' },

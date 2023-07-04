@@ -17,6 +17,7 @@ import { ExampleInputTextEditorComponent } from './example-inputs/example-input-
 import { ExampleInputCodeEditorComponent } from './example-inputs/example-input-code-editor/example-input-code-editor.component';
 import { ExampleInputSelectItemComponent } from './example-inputs/example-input-select-item/example-input-select-item.component';
 import { ExampleInputCheckboxComponent } from './example-inputs/example-input-checkbox/example-input-checkbox.component';
+import { ExampleInputRadioComponent } from './example-inputs/example-input-radio/example-input-radio.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ExampleInputCheckboxComponent } from './example-inputs/example-input-ch
     ExampleInputEmailComponent,
     ExampleInputNumberComponent,
     ExampleInputPasswordComponent,
+    ExampleInputRadioComponent,
     ExampleInputSelectItemComponent,
     ExampleInputSwitchComponent,
     ExampleInputTextComponent,
