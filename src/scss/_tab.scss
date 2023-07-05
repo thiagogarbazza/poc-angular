@@ -30,12 +30,16 @@
 
 .tab .tab-content {
   display: flex;
-  flex: 1;
+  flex: auto;
+  max-width: 100%;
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
   padding: 0.8rem;
 }
 
+.tab .tab-content > * {
+  max-width: 100%;
+}
 
 .tab.tab-start {
   flex-direction: row;
