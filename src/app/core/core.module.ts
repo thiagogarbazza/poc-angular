@@ -6,6 +6,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { NgbDateAdapter, NgbDateParserFormatter, NgbDatepickerConfig, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgSelectConfig, NgSelectModule } from '@ng-select/ng-select';
+import { QuillModule } from 'ngx-quill'
 
 import { InputTextComponent } from './form/input-fields/input-text/input-text.component';
 import { InputTextAreaComponent } from './form/input-fields/input-text-area/input-text-area.component';
@@ -57,7 +58,8 @@ const MODULES = [
     FontAwesomeModule,
     NgbDatepickerModule,
     NgSelectModule,
-    MonacoEditorModule.forRoot() // use forRoot() in main app module only.
+    MonacoEditorModule.forRoot(), // use forRoot() in main app module only.
+    QuillModule.forRoot(),
     //...MODULES
   ],
   exports: [

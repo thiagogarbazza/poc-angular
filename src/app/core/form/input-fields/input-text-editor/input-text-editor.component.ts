@@ -2,6 +2,7 @@ import { Component, ElementRef, forwardRef, Input, ViewChild } from '@angular/co
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { AbstractInputField } from '../abstract-input-field';
+import { QuillEditorComponent } from 'ngx-quill';
 
 @Component({
   selector: 'input-text-editor',
@@ -15,6 +16,16 @@ import { AbstractInputField } from '../abstract-input-field';
 })
 export class InputTextEditorComponent extends AbstractInputField {
 
+  @Input() modules: any = {
+    toolbar: [
+      ['bold', 'italic', 'underline', 'strike'],
+      [{ 'color': [] }, { 'background': [] }],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      [{ 'script': 'sub'}, { 'script': 'super' }],
+      ['blockquote', 'code-block'],
+      ['clean']
+    ]
+  };
   @Input() placeholder: string = '';
-  @ViewChild('input') input: ElementRef;
+  @ViewChild('input') input: QuillEditorComponent;
 }

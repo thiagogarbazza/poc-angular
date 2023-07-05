@@ -19,6 +19,7 @@
 .tab .tab-nav .nav-item {
   display: flex;
   background-color: #F7F7F7;
+  white-space: nowrap;
 }
 
 .tab .tab-nav .nav-item.active {

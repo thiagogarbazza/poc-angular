@@ -1,0 +1,140 @@
+@import '../../../node_modules/quill/dist/quill.core';
+@import '../../../node_modules/quill/dist/quill.bubble';
+@import '../../../node_modules/quill/dist/quill.snow';
+
+
+/** All toolbar buttons are inside of .ql-formats */
+.ql-formats button,
+.ql-formats span {
+  position: relative;
+
+  /** Set a tooltip with css pseudo-elements, when buttons are hover, active or focus  */
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+    position: absolute;
+    z-index: 999999;
+    /* vertically center */
+    bottom: 100%;
+    transform: translateX(-30%);
+
+    /* move to right */
+    left: 100%;
+    margin-left: 15px; /* and add a small left margin */
+
+    --bs-tooltip-color: var(--bs-dark-text-emphasis);
+    --bs-tooltip-bg: var(--bs-dark-bg-subtle);
+    --bs-tooltip-border-color: var(--bs-dark-border-subtle);
+
+    /* basic styles */
+    width: auto;
+    padding: 0.8rem;
+    border: var(--bs-tooltip-border-color);
+    border-radius: 0.8rem 0.8rem 0.8rem 0;
+    color: var(--bs-tooltip-color);
+    background-color: var(--bs-tooltip-bg);
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+/** Set tooltip content for bold button **/
+.ql-bold {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Negrito";
+  }
+}
+
+.ql-italic {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Itálico";
+  }
+}
+
+.ql-underline {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Sublinhado";
+  }
+}
+.ql-strike {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Tachado";
+  }
+}
+.ql-color {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Cor do texto";
+  }
+}
+.ql-background {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Cor do realce do texto";
+  }
+}
+.ql-link {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Hyperlink";
+  }
+}
+.ql-blockquote {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Citação";
+  }
+}
+.ql-clean {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Limpar formatação";
+  }
+}
+.ql-code-block {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Código";
+  }
+}
+.ql-list[value="bullet"] {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Marcadores";
+  }
+}
+.ql-list[value="ordered"] {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Numeração";
+  }
+}
+.ql-script[value="sub"] {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Subscrito";
+  }
+}
+.ql-script[value="super"] {
+  &:hover::after,
+  &:active::after,
+  &:focus::after {
+      content: "Sobrescrito";
+  }
+}
