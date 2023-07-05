@@ -1,6 +1,8 @@
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
+const VALOR = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nProin at diam mi.\nInteger nec ullamcorper justo. Etiam vulputate laoreet tempus.\nPhasellus feugiat nisl dolor, eu fermentum sem maximus vitae.';
+
 @Component({
   selector: 'app-example-input-text-area',
   templateUrl: './example-input-text-area.component.html',
@@ -19,7 +21,7 @@ export class ExampleInputTextAreaComponent implements OnInit {
   private criarFormGroup() {
     return this.formBuilder.group({
       item: new FormControl(null, []),
-      itemComValor: new FormControl('Valor já preenchido', []),
+      itemComValor: new FormControl(VALOR, []),
       itemComPlaceholder: new FormControl(null, []),
       itemDesabilitado: new FormControl({value: null, disabled: true}, []),
       itemReadonly: new FormControl(null, []),

@@ -19,7 +19,7 @@ export class ExampleInputEmailComponent implements OnInit {
   private criarFormGroup() {
     return this.formBuilder.group({
       item: new FormControl(null, []),
-      itemComValor: new FormControl('Valor já preenchido', []),
+      itemComValor: new FormControl('contato@github.com', []),
       itemComPlaceholder: new FormControl(null, []),
       itemDesabilitado: new FormControl({value: null, disabled: true}, []),
       itemReadonly: new FormControl(null, []),

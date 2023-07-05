@@ -19,7 +19,7 @@ export class ExampleInputUrlComponent implements OnInit {
   private criarFormGroup() {
     return this.formBuilder.group({
       item: new FormControl(null, []),
-      itemComValor: new FormControl('Valor já preenchido', []),
+      itemComValor: new FormControl('https://docs.github.com/pt', []),
       itemComPlaceholder: new FormControl(null, []),
       itemDesabilitado: new FormControl({value: null, disabled: true}, []),
       itemReadonly: new FormControl(null, []),
