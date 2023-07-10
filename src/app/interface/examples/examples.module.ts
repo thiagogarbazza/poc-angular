@@ -18,8 +18,8 @@ import { ExampleInputCodeEditorComponent } from './example-inputs/example-input-
 import { ExampleInputSelectItemComponent } from './example-inputs/example-input-select-item/example-input-select-item.component';
 import { ExampleInputCheckboxComponent } from './example-inputs/example-input-checkbox/example-input-checkbox.component';
 import { ExampleInputRadioComponent } from './example-inputs/example-input-radio/example-input-radio.component';
-import { ExampleOutputTextComponent } from './example-output/example-output-text/example-output-text.component';
-import { ExampleOutputsTemplateComponent } from './example-output/example-outputs-template/example-outputs-template.component';
+import { ExampleOutputTextComponent } from './example-outputs/example-output-text/example-output-text.component';
+import { ExampleOutputsTemplateComponent } from './example-outputs/example-outputs-template/example-outputs-template.component';
 
 @NgModule({
   declarations: [
