@@ -1,8 +1,6 @@
-
-
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ActivationStart, NavigationEnd, Router, RoutesRecognized } from '@angular/router';
-import { filter, map, mergeMap } from 'rxjs/operators';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, ActivationStart, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-example-inputs-template',
@@ -12,20 +10,25 @@ import { filter, map, mergeMap } from 'rxjs/operators';
 export class ExampleInputsTemplateComponent implements OnInit {
 
   public activeTab:  string = '';
+  private subscription: Array<Subscription> = [];
 
   public constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.activatedRoute.url.subscribe(() => {
+    this.subscription[0] = this.activatedRoute.url.subscribe(() => {
       if (this.activatedRoute.snapshot.firstChild) {
         this.activeTab = this.activatedRoute.snapshot.firstChild.data['activeTab'];
       }
      });
 
-    this.router.events.subscribe((data) => {
+     this.subscription[1] = this.router.events.subscribe((data) => {
       if (data instanceof ActivationStart) {
         this.activeTab = data.snapshot.data['activeTab'];
       }
     });
+  }
+
+  ngOnDestroy() {
+    this.subscription.forEach(s => s.unsubscribe());
   }
 }
