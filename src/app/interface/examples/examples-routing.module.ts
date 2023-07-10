@@ -16,6 +16,8 @@ import { ExampleInputCodeEditorComponent } from './example-inputs/example-input-
 import { ExampleInputSelectItemComponent } from './example-inputs/example-input-select-item/example-input-select-item.component';
 import { ExampleInputCheckboxComponent } from './example-inputs/example-input-checkbox/example-input-checkbox.component';
 import { ExampleInputRadioComponent } from './example-inputs/example-input-radio/example-input-radio.component';
+import { ExampleOutputsTemplateComponent } from './example-output/example-outputs-template/example-outputs-template.component';
+import { ExampleOutputTextComponent } from './example-output/example-output-text/example-output-text.component';
 
 const routes: Routes = [
   {
@@ -40,6 +42,13 @@ const routes: Routes = [
       { path: 'text-area', component: ExampleInputTextAreaComponent, data: {activeTab: 'text-area'}, pathMatch: 'full' },
       { path: 'text-editor', component: ExampleInputTextEditorComponent, data: {activeTab: 'text-editor'}, pathMatch: 'full' },
       { path: 'url', component: ExampleInputUrlComponent, data: {activeTab: 'url'}, pathMatch: 'full' },
+    ]
+  },
+  {
+    path: 'examples/outputs',
+    component: ExampleOutputsTemplateComponent,
+    children: [
+      { path: 'text', component: ExampleOutputTextComponent, data: {activeTab: 'text'}, pathMatch: 'full' },
     ]
   }
 ];

@@ -1,4 +1,5 @@
-.input-container .label-group {
+.input-container .label-group,
+.output-container .label-group {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -6,23 +7,33 @@
   align-items: center;
 }
 
-.input-container .form-label {
+.input-container .form-label,
+.output-container .form-label {
   margin-bottom: 0;
   opacity: 0.5;
   font-weight: 450;
 }
 
-.input-container .input-help {
+.input-container .input-help,
+.output-container .input-help {
   cursor: pointer;
 }
 
-.input-container .input-help .ng-fa-icon {
+.input-container .input-help .ng-fa-icon,
+.output-container .input-help .ng-fa-icon {
   opacity: 0.5;
 }
 
 .input-container .input-help .ng-fa-icon:focus,
-.input-container .input-help .ng-fa-icon:hover {
+.output-container .input-help .ng-fa-icon:focus,
+.input-container .input-help .ng-fa-icon:hover,
+.output-container .input-help .ng-fa-icon:hover {
   cursor: pointer;
   --bs-text-opacity: 0.5;
   color: rgba(var(--bs-info-rgb), var(--bs-text-opacity)) !important;
+}
+
+.form-control-static {
+  word-break: break-word;
+  white-space: pre-line;
 }
