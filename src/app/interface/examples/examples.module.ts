@@ -20,6 +20,7 @@ import { ExampleInputCheckboxComponent } from './example-inputs/example-input-ch
 import { ExampleInputRadioComponent } from './example-inputs/example-input-radio/example-input-radio.component';
 import { ExampleOutputTextComponent } from './example-outputs/example-output-text/example-output-text.component';
 import { ExampleOutputsTemplateComponent } from './example-outputs/example-outputs-template/example-outputs-template.component';
+import { ExampleInputFileComponent } from './example-inputs/example-input-file/example-input-file.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ExampleOutputsTemplateComponent } from './example-outputs/example-outpu
     ExampleInputCodeEditorComponent,
     ExampleInputDateComponent,
     ExampleInputEmailComponent,
+    ExampleInputFileComponent,
     ExampleInputNumberComponent,
     ExampleInputPasswordComponent,
     ExampleInputRadioComponent,

@@ -18,6 +18,7 @@ import { ExampleInputCheckboxComponent } from './example-inputs/example-input-ch
 import { ExampleInputRadioComponent } from './example-inputs/example-input-radio/example-input-radio.component';
 import { ExampleOutputsTemplateComponent } from './example-outputs/example-outputs-template/example-outputs-template.component';
 import { ExampleOutputTextComponent } from './example-outputs/example-output-text/example-output-text.component';
+import { ExampleInputFileComponent } from './example-inputs/example-input-file/example-input-file.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,7 @@ const routes: Routes = [
       { path: 'code-editor', component: ExampleInputCodeEditorComponent, data: {activeTab: 'code-editor'}, pathMatch: 'full' },
       { path: 'date', component: ExampleInputDateComponent, data: {activeTab: 'date'}, pathMatch: 'full' },
       { path: 'email', component: ExampleInputEmailComponent, data: {activeTab: 'email'}, pathMatch: 'full' },
+      { path: 'file', component: ExampleInputFileComponent, data: {activeTab: 'file'}, pathMatch: 'full' },
       { path: 'number', component: ExampleInputNumberComponent, data: {activeTab: 'number'}, pathMatch: 'full' },
       { path: 'password', component: ExampleInputPasswordComponent, data: {activeTab: 'password'}, pathMatch: 'full' },
       { path: 'radio', component: ExampleInputRadioComponent, data: {activeTab: 'radio'}, pathMatch: 'full' },

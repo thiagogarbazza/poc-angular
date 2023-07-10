@@ -25,6 +25,7 @@ import { InputSelectItemComponent } from './form/input-fields/input-select-item/
 import { InputCheckboxComponent } from './form/input-fields/input-checkbox/input-checkbox.component';
 import { InputRadioComponent } from './form/input-fields/input-radio/input-radio.component';
 import { OutputTextComponent } from './form/output-fields/output-text/output-text.component';
+import { InputFileComponent } from './form/input-fields/input-file/input-file.component';
 
 
 const COMPONENTS = [
@@ -32,6 +33,7 @@ const COMPONENTS = [
   InputCodeEditorComponent,
   InputDateComponent,
   InputEmailComponent,
+  InputFileComponent,
   InputNumberComponent,
   InputPasswordComponent,
   InputRadioComponent,
