@@ -1,7 +1,7 @@
 
 
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { ActivatedRoute, ActivationStart, NavigationEnd, Router } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs/operators';
 
 @Component({
@@ -11,23 +11,21 @@ import { filter, map, mergeMap } from 'rxjs/operators';
 })
 export class ExampleOutputsTemplateComponent implements OnInit {
 
-  public activeTab = 'text';
+  public activeTab:  string = '';
 
   public constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd),
-      map(() => this.activatedRoute),
-      map(route => {
-        while (route.firstChild) route = route.firstChild
-        return route
-      }),
-      filter(route => route.outlet === 'primary'),
-      mergeMap(route => route.data)
-    )
-    .subscribe( (data: any) => {
-      this.activeTab = data.activeTab;
+    this.activatedRoute.url.subscribe(() => {
+      if (this.activatedRoute.snapshot.firstChild) {
+        this.activeTab = this.activatedRoute.snapshot.firstChild.data['activeTab'];
+      }
+     });
+
+    this.router.events.subscribe((data) => {
+      if (data instanceof ActivationStart) {
+        this.activeTab = data.snapshot.data['activeTab'];
+      }
     });
   }
 }
