@@ -1,6 +1,7 @@
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import { Converters } from 'src/app/core/utils/converters';
+
+import { Converters } from '@app-core/utils/converters';
 
 @Component({
   selector: 'app-example-input-date',

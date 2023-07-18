@@ -1,7 +1,7 @@
 import { Component, ElementRef, forwardRef, Input, ViewChild } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
-import { AbstractInputField } from '../abstract-input-field';
+import { AbstractInputField } from '@app-core/components/input-fields/abstract-input-field';
 
 @Component({
   selector: 'input-date',

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {NgbDateAdapter, NgbDateParserFormatter, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
-import { Converters } from 'src/app/core/utils/converters';
+import { Converters } from '@app-core/utils/converters';
 
 /**
  * This Service handles how the date is represented in scripts i.e. ngModel.

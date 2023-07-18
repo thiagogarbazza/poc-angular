@@ -1,8 +1,8 @@
 import { Component, ElementRef, forwardRef, Input, ViewChild } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
-import { AbstractInputField } from '../abstract-input-field';
-import SelectableItem from 'src/app/core/service/selectable-item';
+import { AbstractInputField } from '@app-core/components/input-fields/abstract-input-field';
+import SelectableItem from '@app-core/service/selectable-item';
 
 @Component({
   selector: 'input-select-item',

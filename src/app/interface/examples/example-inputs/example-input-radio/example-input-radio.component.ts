@@ -1,6 +1,7 @@
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
-import SelectableItem from 'src/app/core/service/selectable-item';
+
+import SelectableItem from '@app-core/service/selectable-item';
 
 @Component({
   selector: 'app-example-input-radio',

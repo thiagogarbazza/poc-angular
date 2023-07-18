@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome'
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 import { NgbDateAdapter, NgbDateParserFormatter, NgbDatepickerConfig, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgSelectConfig, NgSelectModule } from '@ng-select/ng-select';
 import { QuillModule } from 'ngx-quill'
@@ -20,7 +21,6 @@ import { InputDateComponent } from './components/input-fields/input-date/input-d
 import { CustomAdapter, CustomDateParserFormatter } from './components/input-fields/input-date/input-date.formatters';
 import { InputTextEditorComponent } from './components/input-fields/input-text-editor/input-text-editor.component';
 import { InputCodeEditorComponent } from './components/input-fields/input-code-editor/input-code-editor.component';
-import { MonacoEditorModule } from 'ngx-monaco-editor-v2';
 import { InputSelectItemComponent } from './components/input-fields/input-select-item/input-select-item.component';
 import { InputCheckboxComponent } from './components/input-fields/input-checkbox/input-checkbox.component';
 import { InputRadioComponent } from './components/input-fields/input-radio/input-radio.component';
