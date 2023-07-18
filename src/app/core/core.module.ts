@@ -9,23 +9,23 @@ import { NgbDateAdapter, NgbDateParserFormatter, NgbDatepickerConfig, NgbDatepic
 import { NgSelectConfig, NgSelectModule } from '@ng-select/ng-select';
 import { QuillModule } from 'ngx-quill'
 
-import { InputTextComponent } from './components/input-fields/input-text/input-text.component';
-import { InputTextAreaComponent } from './components/input-fields/input-text-area/input-text-area.component';
-import { InvalidFeedbackComponent } from './components/invalid-feedback/invalid-feedback.component';
-import { InputNumberComponent } from './components/input-fields/input-number/input-number.component';
-import { InputSwitchComponent } from './components/input-fields/input-switch/input-switch.component';
-import { InputUrlComponent } from './components/input-fields/input-url/input-url.component';
-import { InputEmailComponent } from './components/input-fields/input-email/input-email.component';
-import { InputPasswordComponent } from './components/input-fields/input-password/input-password.component';
-import { InputDateComponent } from './components/input-fields/input-date/input-date.component';
-import { CustomAdapter, CustomDateParserFormatter } from './components/input-fields/input-date/input-date.formatters';
-import { InputTextEditorComponent } from './components/input-fields/input-text-editor/input-text-editor.component';
-import { InputCodeEditorComponent } from './components/input-fields/input-code-editor/input-code-editor.component';
-import { InputSelectItemComponent } from './components/input-fields/input-select-item/input-select-item.component';
-import { InputCheckboxComponent } from './components/input-fields/input-checkbox/input-checkbox.component';
-import { InputRadioComponent } from './components/input-fields/input-radio/input-radio.component';
-import { OutputTextComponent } from './components/output-fields/output-text/output-text.component';
-import { InputFileComponent } from './components/input-fields/input-file/input-file.component';
+import { InputCheckboxComponent } from '@app-core/components//input-fields/input-checkbox/input-checkbox.component';
+import { InputCodeEditorComponent } from '@app-core/components//input-fields/input-code-editor/input-code-editor.component';
+import { InputDateComponent } from '@app-core/components//input-fields/input-date/input-date.component';
+import { CustomAdapter, CustomDateParserFormatter } from '@app-core/components//input-fields/input-date/input-date.formatters';
+import { InputFileComponent } from '@app-core/components//input-fields/input-file/input-file.component';
+import { InputEmailComponent } from '@app-core/components//input-fields/input-email/input-email.component';
+import { InputNumberComponent } from '@app-core/components//input-fields/input-number/input-number.component';
+import { InputPasswordComponent } from '@app-core/components//input-fields/input-password/input-password.component';
+import { InputRadioComponent } from '@app-core/components//input-fields/input-radio/input-radio.component';
+import { InputSelectItemComponent } from '@app-core/components//input-fields/input-select-item/input-select-item.component';
+import { InputSwitchComponent } from '@app-core/components//input-fields/input-switch/input-switch.component';
+import { InputTextComponent } from '@app-core/components//input-fields/input-text/input-text.component';
+import { InputTextAreaComponent } from '@app-core/components//input-fields/input-text-area/input-text-area.component';
+import { InputTextEditorComponent } from '@app-core/components//input-fields/input-text-editor/input-text-editor.component';
+import { InputUrlComponent } from '@app-core/components//input-fields/input-url/input-url.component';
+import { InvalidFeedbackComponent } from '@app-core/components//invalid-feedback/invalid-feedback.component';
+import { OutputTextComponent } from '@app-core/components//output-fields/output-text/output-text.component';
 
 
 const COMPONENTS = [

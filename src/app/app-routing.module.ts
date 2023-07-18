@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InterfaceRoutingModule } from './interface/interface-routing.module';
+
+import { InterfaceRoutingModule } from '@app-interface/interface-routing.module';
 
 const routes: Routes = [];
 
