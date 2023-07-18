@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ExampleTabsComponent } from './example-tabs/example-tabs.component';
-import { ExampleInputsTemplateComponent } from './example-inputs/example-inputs-template/example-inputs-template.component';
-import { ExampleInputNumberComponent } from './example-inputs/example-input-number/example-input-number.component';
-import { ExampleInputTextAreaComponent } from './example-inputs/example-input-text-area/example-input-text-area.component';
-import { ExampleInputTextComponent } from './example-inputs/example-input-text/example-input-text.component';
-import { ExampleInputSwitchComponent } from './example-inputs/example-input-switch/example-input-switch.component';
-import { ExampleInputUrlComponent } from './example-inputs/example-input-url/example-input-url.component';
-import { ExampleInputEmailComponent } from './example-inputs/example-input-email/example-input-email.component';
-import { ExampleInputPasswordComponent } from './example-inputs/example-input-password/example-input-password.component';
-import { ExampleInputDateComponent } from './example-inputs/example-input-date/example-input-date.component';
-import { ExampleInputTextEditorComponent } from './example-inputs/example-input-text-editor/example-input-text-editor.component';
-import { ExampleInputCodeEditorComponent } from './example-inputs/example-input-code-editor/example-input-code-editor.component';
-import { ExampleInputSelectItemComponent } from './example-inputs/example-input-select-item/example-input-select-item.component';
-import { ExampleInputCheckboxComponent } from './example-inputs/example-input-checkbox/example-input-checkbox.component';
-import { ExampleInputRadioComponent } from './example-inputs/example-input-radio/example-input-radio.component';
-import { ExampleOutputsTemplateComponent } from './example-outputs/example-outputs-template/example-outputs-template.component';
-import { ExampleOutputTextComponent } from './example-outputs/example-output-text/example-output-text.component';
-import { ExampleInputFileComponent } from './example-inputs/example-input-file/example-input-file.component';
+import { ExampleTabsComponent } from '@app-interface/examples/example-tabs/example-tabs.component';
+import { ExampleInputsTemplateComponent } from '@app-interface/examples/example-inputs/example-inputs-template/example-inputs-template.component';
+import { ExampleInputNumberComponent } from '@app-interface/examples/example-inputs/example-input-number/example-input-number.component';
+import { ExampleInputTextAreaComponent } from '@app-interface/examples/example-inputs/example-input-text-area/example-input-text-area.component';
+import { ExampleInputTextComponent } from '@app-interface/examples/example-inputs/example-input-text/example-input-text.component';
+import { ExampleInputSwitchComponent } from '@app-interface/examples/example-inputs/example-input-switch/example-input-switch.component';
+import { ExampleInputUrlComponent } from '@app-interface/examples/example-inputs/example-input-url/example-input-url.component';
+import { ExampleInputEmailComponent } from '@app-interface/examples/example-inputs/example-input-email/example-input-email.component';
+import { ExampleInputPasswordComponent } from '@app-interface/examples/example-inputs/example-input-password/example-input-password.component';
+import { ExampleInputDateComponent } from '@app-interface/examples/example-inputs/example-input-date/example-input-date.component';
+import { ExampleInputTextEditorComponent } from '@app-interface/examples/example-inputs/example-input-text-editor/example-input-text-editor.component';
+import { ExampleInputCodeEditorComponent } from '@app-interface/examples/example-inputs/example-input-code-editor/example-input-code-editor.component';
+import { ExampleInputSelectItemComponent } from '@app-interface/examples/example-inputs/example-input-select-item/example-input-select-item.component';
+import { ExampleInputCheckboxComponent } from '@app-interface/examples/example-inputs/example-input-checkbox/example-input-checkbox.component';
+import { ExampleInputRadioComponent } from '@app-interface/examples/example-inputs/example-input-radio/example-input-radio.component';
+import { ExampleOutputsTemplateComponent } from '@app-interface/examples/example-outputs/example-outputs-template/example-outputs-template.component';
+import { ExampleOutputTextComponent } from '@app-interface/examples/example-outputs/example-output-text/example-output-text.component';
+import { ExampleInputFileComponent } from '@app-interface/examples/example-inputs/example-input-file/example-input-file.component';
 
 const routes: Routes = [
   {
