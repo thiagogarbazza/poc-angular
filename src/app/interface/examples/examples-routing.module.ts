@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ExampleTabsComponent } from '@app-interface/examples/example-tabs/example-tabs.component';
 import { ExampleInputsTemplateComponent } from '@app-interface/examples/example-inputs/example-inputs-template/example-inputs-template.component';
+import { ExampleInputFileComponent } from '@app-interface/examples/example-inputs/example-input-file/example-input-file.component';
 import { ExampleInputNumberComponent } from '@app-interface/examples/example-inputs/example-input-number/example-input-number.component';
 import { ExampleInputTextAreaComponent } from '@app-interface/examples/example-inputs/example-input-text-area/example-input-text-area.component';
 import { ExampleInputTextComponent } from '@app-interface/examples/example-inputs/example-input-text/example-input-text.component';
@@ -18,7 +19,7 @@ import { ExampleInputCheckboxComponent } from '@app-interface/examples/example-i
 import { ExampleInputRadioComponent } from '@app-interface/examples/example-inputs/example-input-radio/example-input-radio.component';
 import { ExampleOutputsTemplateComponent } from '@app-interface/examples/example-outputs/example-outputs-template/example-outputs-template.component';
 import { ExampleOutputTextComponent } from '@app-interface/examples/example-outputs/example-output-text/example-output-text.component';
-import { ExampleInputFileComponent } from '@app-interface/examples/example-inputs/example-input-file/example-input-file.component';
+import { ExampleOutputCodeComponent } from './example-outputs/example-output-code/example-output-code.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,7 @@ const routes: Routes = [
     path: 'examples/outputs',
     component: ExampleOutputsTemplateComponent,
     children: [
+      { path: 'code', component: ExampleOutputCodeComponent, data: {activeTab: 'code'}, pathMatch: 'full' },
       { path: 'text', component: ExampleOutputTextComponent, data: {activeTab: 'text'}, pathMatch: 'full' },
     ]
   }

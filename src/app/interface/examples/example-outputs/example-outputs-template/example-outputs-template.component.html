@@ -3,6 +3,9 @@
 
   <div class="tab tab-start">
     <ul class="tab-nav">
+      <li class="nav-item" [ngClass]="{'active': activeTab === 'code'}">
+        <a class="nav-link" routerLink="/examples/outputs/code">output-code</a>
+      </li>
       <li class="nav-item" [ngClass]="{'active': activeTab === 'text'}">
         <a class="nav-link" routerLink="/examples/outputs/text">output-text</a>
       </li>

@@ -25,8 +25,8 @@ import { InputTextAreaComponent } from '@app-core/components//input-fields/input
 import { InputTextEditorComponent } from '@app-core/components//input-fields/input-text-editor/input-text-editor.component';
 import { InputUrlComponent } from '@app-core/components//input-fields/input-url/input-url.component';
 import { InvalidFeedbackComponent } from '@app-core/components//invalid-feedback/invalid-feedback.component';
+import { OutputCodeComponent } from '@app-core/components/output-fields/output-code/output-code.component';
 import { OutputTextComponent } from '@app-core/components//output-fields/output-text/output-text.component';
-
 
 const COMPONENTS = [
   InputCheckboxComponent,
@@ -44,6 +44,7 @@ const COMPONENTS = [
   InputTextEditorComponent,
   InputUrlComponent,
   InvalidFeedbackComponent,
+  OutputCodeComponent,
   OutputTextComponent,
 ];
 

@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { CoreModule } from '@app-core/core.module';
 import { ExampleTabsComponent } from '@app-interface/examples/example-tabs/example-tabs.component';
 import { ExampleInputsTemplateComponent } from '@app-interface/examples/example-inputs/example-inputs-template/example-inputs-template.component';
+import { ExampleInputFileComponent } from '@app-interface/examples/example-inputs/example-input-file/example-input-file.component';
 import { ExampleInputNumberComponent } from '@app-interface/examples/example-inputs/example-input-number/example-input-number.component';
 import { ExampleInputTextAreaComponent } from '@app-interface/examples/example-inputs/example-input-text-area/example-input-text-area.component';
 import { ExampleInputTextComponent } from '@app-interface/examples/example-inputs/example-input-text/example-input-text.component';
@@ -18,9 +19,9 @@ import { ExampleInputCodeEditorComponent } from '@app-interface/examples/example
 import { ExampleInputSelectItemComponent } from '@app-interface/examples/example-inputs/example-input-select-item/example-input-select-item.component';
 import { ExampleInputCheckboxComponent } from '@app-interface/examples/example-inputs/example-input-checkbox/example-input-checkbox.component';
 import { ExampleInputRadioComponent } from '@app-interface/examples/example-inputs/example-input-radio/example-input-radio.component';
+import { ExampleOutputCodeComponent } from './example-outputs/example-output-code/example-output-code.component';
 import { ExampleOutputTextComponent } from '@app-interface/examples/example-outputs/example-output-text/example-output-text.component';
 import { ExampleOutputsTemplateComponent } from '@app-interface/examples/example-outputs/example-outputs-template/example-outputs-template.component';
-import { ExampleInputFileComponent } from '@app-interface/examples/example-inputs/example-input-file/example-input-file.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ExampleInputFileComponent } from '@app-interface/examples/example-input
     ExampleInputUrlComponent,
     ExampleInputsTemplateComponent,
     ExampleTabsComponent,
+    ExampleOutputCodeComponent,
     ExampleOutputTextComponent,
     ExampleOutputsTemplateComponent
   ],
