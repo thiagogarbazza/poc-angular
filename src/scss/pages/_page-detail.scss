@@ -1,0 +1,23 @@
+.page-detail {
+
+ }
+
+.toolbar-action {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toolbar-col {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}

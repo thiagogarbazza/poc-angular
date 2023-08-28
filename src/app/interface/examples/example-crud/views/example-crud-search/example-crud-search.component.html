@@ -1,0 +1,71 @@
+<main class="container-fluid page-search">
+  <h1>Exemplo de crud</h1>
+
+  <div class="toolbar-action page-search mb-2">
+    <a href="/examples/crud/create" type="button" class="btn btn-primary" title="Clique aqui para alterar este registro."><fa-icon icon="circle-plus" class="me-2"></fa-icon>Create new</a>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-3 col-lg-3">
+      <form [formGroup]="formGroup" novalidate tabindex="0" (ngSubmit)="onSubmit()">
+        <section class="card search-form">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <input-text class="col-12" label="Text" formControlName="text"></input-text>
+              <input-select-item class="col-12" [items]="dataToBuildForm.types" label="Type" formControlName="types" [multiple]="true"></input-select-item>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="toolbar-action">
+              <button (click)="clean()" type="button" class="btn btn-secondary"  title="Clique aqui para deletar este registro." ><fa-icon icon="eraser" class="me-2"></fa-icon>Clean</button>
+              <button type="submit" class="btn btn-primary"  title="Clique aqui para deletar este registro." ><fa-icon icon="magnifying-glass" class="me-2"></fa-icon>Search</button>
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+
+  <div class="col-sm-12 col-md-9 col-lg-9">
+    <section class="card search-result">
+      <div class="card-header">
+        Featured
+      </div>
+      <div class="card-body">
+        <data-grid [page]="result" (change)="onChangeDataGrid($event)">
+          <table class="table table-bordered table-hover table-striped table-theme-app">
+            <thead>
+              <tr>
+                <th class="col-1" sort="code">Code</th>
+                <th class="col-4" sort="description">Description</th>
+                <th class="col-1" sort="active">Active</th>
+                <th class="col-2" sort="scale">Scale</th>
+                <th class="col-2" sort="type">Type</th>
+                <th class="col-2">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr *ngFor="let i of result?.content">
+                <td>{{ i.code }}</td>
+                <td>{{ i.description }}</td>
+                <td>{{ i.active }}</td>
+                <td>{{ i.scale }}</td>
+                <td>{{ i.type }}</td>
+                <td>
+                  <div class="toolbar-col">
+                    <button *ngIf="i.actions.canDelete" (click)="delete(i.id)" type="button" class="btn btn-outline-danger btn-sm"  title="Clique aqui para deletar este registro." ><fa-icon icon="trash"></fa-icon></button>
+                    <a *ngIf="i.actions.canUpdate" href="/examples/crud/{{i.id}}/update?b=search" type="button" class="btn btn-outline-primary btn-sm" title="Clique aqui para alterar este registro."><fa-icon icon="pen-to-square"></fa-icon></a>
+                    <a *ngIf="i.actions.canDetail" [routerLink]="['/examples/crud', i.id]" type="button" class="btn btn-outline-primary btn-sm" title="Clique aqui para detalhar este registro."><fa-icon icon="eye"></fa-icon></a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </data-grid>
+      </div>
+    </section>
+  </div>
+  </div>
+</main>

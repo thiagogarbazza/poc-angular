@@ -1,0 +1,28 @@
+<main class="container page-update">
+  <h1 class="page-title">Exemplo de crud, create  page </h1>
+
+  <form [formGroup]="formGroup" novalidate tabindex="0" (ngSubmit)="onSubmit()">
+  <section class="card card-update">
+    <div class="card-body">
+      <div class="row mb-2">
+        <input-text class="col-2" label="Code" formControlName="code"></input-text>
+        <input-text class="col-10" label="Description" formControlName="description"></input-text>
+      </div>
+      <div class="row mb-2">
+        <input-switch class="col-2" label="Active" formControlName="active" labelOn="True value" labelOff="False value"></input-switch>
+        <input-number class="col-3" label="Scale" formControlName="scale"></input-number>
+        <input-select-item class="col-7" [items]="dataToBuildForm.types" label="Type" formControlName="type"></input-select-item>
+      </div>
+      <div class="row">
+        <input-text-area class="col-12" label="Observation" formControlName="observation"></input-text-area>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="toolbar-action">
+        <button (click)="voltar()" type="button" class="btn btn-link"  title="Clique aqui para voltar a tela anterior."><fa-icon icon="circle-left" class="me-2"></fa-icon>Voltar</button>
+        <button type="submit" [disabled]="formGroup.invalid || formGroup.pristine" class="btn btn-primary" title="Clique aqui para alterar este registro."><fa-icon icon="floppy-disk" class="me-2"></fa-icon>Save</button>
+      </div>
+    </div>
+  </section>
+  </form>
+</main>

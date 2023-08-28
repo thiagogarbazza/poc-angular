@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 export class ExampleInputsTemplateComponent implements OnInit {
 
   public activeTab:  string = '';
-  private subscription: Array<Subscription> = [];
+  private subscription: Subscription[] = [];
 
   public constructor(private activatedRoute: ActivatedRoute, private router: Router) { }
 

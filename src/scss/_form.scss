@@ -37,3 +37,11 @@
   word-break: break-word;
   white-space: break-spaces;
 }
+
+.input-counter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+}

@@ -20,13 +20,12 @@ import { ExampleInputRadioComponent } from '@app-interface/examples/example-inpu
 import { ExampleOutputsTemplateComponent } from '@app-interface/examples/example-outputs/example-outputs-template/example-outputs-template.component';
 import { ExampleOutputTextComponent } from '@app-interface/examples/example-outputs/example-output-text/example-output-text.component';
 import { ExampleOutputCodeComponent } from './example-outputs/example-output-code/example-output-code.component';
+import { ExampleCRUDRoutingModule } from './example-crud/example-crud-routing.module';
+import { ExampleDataGridComponent } from './example-data-grid/example-data-grid.component';
 
 const routes: Routes = [
-  {
-    path: 'examples/tabs',
-    component: ExampleTabsComponent,
-    pathMatch: 'full'
-  },
+  { path: 'examples/data-grid', component: ExampleDataGridComponent, pathMatch: 'full' },
+  { path: 'examples/tabs', component: ExampleTabsComponent, pathMatch: 'full' },
   {
     path: 'examples/inputs',
     component: ExampleInputsTemplateComponent,
@@ -59,7 +58,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ExampleCRUDRoutingModule
   ],
   exports: [RouterModule]
 })

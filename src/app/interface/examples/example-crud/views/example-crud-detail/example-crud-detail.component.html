@@ -1,0 +1,27 @@
+<main class="container page-detail">
+  <h1 class="page-title">Exemplo de crud, detail page {{item.id}}</h1>
+
+  <section class="card card-detail">
+    <div class="card-body">
+      <div class="row mb-2">
+        <output-text class="col-2" label="Code">{{item.code}}</output-text>
+        <output-text class="col-10" label="Description">{{item.description}}</output-text>
+      </div>
+      <div class="row mb-2">
+        <output-text class="col-2" label="Active">{{item.active}}</output-text>
+        <output-text class="col-3" label="Scale">{{item.scale}}</output-text>
+        <output-text class="col-7" label="Type">{{item.type}}</output-text>
+      </div>
+      <div class="row">
+        <output-text class="col-12" label="Observation">{{item.observation}}</output-text>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="toolbar-action">
+        <button (click)="voltar()"  type="button" class="btn btn-link"    title="Clique aqui para voltar a tela anterior."><fa-icon icon="circle-left" class="me-2"></fa-icon>Voltar</button>
+        <button *ngIf="item.actions.canDelete" (click)="delete()" type="button" class="btn btn-danger"  title="Clique aqui para deletar este registro." ><fa-icon icon="trash" class="me-2"></fa-icon>Delete</button>
+        <a *ngIf="item.actions.canUpdate" href="/examples/crud/{{item.id}}/update?b=detail" type="button" class="btn btn-primary" title="Clique aqui para alterar este registro."><fa-icon icon="pen-to-square" class="me-2"></fa-icon>Update</a>
+      </div>
+    </div>
+  </section>
+</main>

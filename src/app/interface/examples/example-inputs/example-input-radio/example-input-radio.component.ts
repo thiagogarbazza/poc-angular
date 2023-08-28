@@ -1,7 +1,7 @@
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
-import SelectableItem from '@app-core/service/selectable-item';
+import { SelectableItem } from '@app/core/models/selectable-item';
 
 @Component({
   selector: 'app-example-input-radio',
@@ -11,7 +11,7 @@ import SelectableItem from '@app-core/service/selectable-item';
 export class ExampleInputRadioComponent implements OnInit {
 
   public formGroup: FormGroup;
-  public items: Array<SelectableItem<string>> = [
+  public items: SelectableItem<string>[] = [
     { id: '1', description: '1 - description', tooltip: 'tooltip for id 1' },
     { id: '2', description: '2 - description', tooltip: 'tooltip for id 2' },
     { id: '3', description: '3 - description', tooltip: 'tooltip for id 3' },

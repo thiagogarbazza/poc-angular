@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { CoreModule } from '@app-core/core.module';
+
+import { ExampleDataGridComponent } from './example-data-grid/example-data-grid.component';
 import { ExampleTabsComponent } from '@app-interface/examples/example-tabs/example-tabs.component';
 import { ExampleInputsTemplateComponent } from '@app-interface/examples/example-inputs/example-inputs-template/example-inputs-template.component';
 import { ExampleInputFileComponent } from '@app-interface/examples/example-inputs/example-input-file/example-input-file.component';
@@ -22,6 +24,8 @@ import { ExampleInputRadioComponent } from '@app-interface/examples/example-inpu
 import { ExampleOutputCodeComponent } from './example-outputs/example-output-code/example-output-code.component';
 import { ExampleOutputTextComponent } from '@app-interface/examples/example-outputs/example-output-text/example-output-text.component';
 import { ExampleOutputsTemplateComponent } from '@app-interface/examples/example-outputs/example-outputs-template/example-outputs-template.component';
+
+import { ExampleCRUDModule } from './example-crud/example-crud.module';
 
 @NgModule({
   declarations: [
@@ -43,12 +47,14 @@ import { ExampleOutputsTemplateComponent } from '@app-interface/examples/example
     ExampleTabsComponent,
     ExampleOutputCodeComponent,
     ExampleOutputTextComponent,
-    ExampleOutputsTemplateComponent
+    ExampleOutputsTemplateComponent,
+    ExampleDataGridComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    CoreModule
+    CoreModule,
+    ExampleCRUDModule
   ]
 })
 export class ExamplesModule { }
