@@ -2,7 +2,7 @@ import { Component, ElementRef, forwardRef, Input, ViewChild } from '@angular/co
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { AbstractInputField } from '@app-core/components/input-fields/abstract-input-field';
-import SelectableItem from '@app-core/service/selectable-item';
+import { SelectableItem } from '@app/core/models/selectable-item';
 
 @Component({
   selector: 'input-select-item',
@@ -16,8 +16,12 @@ import SelectableItem from '@app-core/service/selectable-item';
 })
 export class InputSelectItemComponent extends AbstractInputField {
 
-  @Input() items: Array<SelectableItem<string>>;
+  @Input() items: SelectableItem<any>[];
   @Input() multiple: boolean;
   @Input() placeholder: string = '';
   @ViewChild('input') input: ElementRef;
+
+  public trackByFn(item: SelectableItem<any>) {
+    return item.id;
+  }
 }

@@ -1,0 +1,12 @@
+.pagination-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+
+  .pagination {
+    margin: 0;
+  }
+}

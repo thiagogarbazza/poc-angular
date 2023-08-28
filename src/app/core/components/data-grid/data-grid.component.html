@@ -1,0 +1,27 @@
+<div class="data-grid-container">
+  <div class="top-container mb-3">
+    <div class="searchable-container" *ngIf="searchable">
+      <div class="input-group input-group-sm" >
+        <input type="text" class="form-control" placeholder="Text to filter" aria-label="Search" #searchInput (input)="changeFilter(searchInput.value)">
+        <span class="input-group-text"><fa-icon icon="magnifying-glass" class="text-muted"></fa-icon></span>
+      </div>
+    </div>
+
+    <nav class="nav-pagination">
+      <div class="page-size-selection">
+        <span class="small text-muted">Items per page:</span>
+        <ng-select class="form-control form-control-sm" [(ngModel)]="page.size" (change)="changePageSize(page.size)" [items]="pageSizes" [clearable]="false"></ng-select>
+      </div>
+      <pagination [page]="page" (change)="changePageNumber($event)"></pagination>
+    </nav>
+  </div>
+  <div class="data-container">
+    <div class="table-responsive"><ng-content></ng-content></div>
+  </div>
+  <div class="bottom-container">
+    <small class="small text-muted">Showing {{(page.number * page.size) + 1 }} to {{page.size * (page.number + 1) > page.totalElements ? page.totalElements : page.size * (page.number + 1)}} of {{page.totalElements}} items.</small>
+    <nav class="nav-pagination">
+      <pagination [page]="page" (change)="changePageNumber($event)"></pagination>
+    </nav>
+  </div>
+</div>

@@ -15,11 +15,11 @@
       [ngClass]="{'is-invalid': isInvalid(), 'is-valid': isValid()}"
       [readonly]="readonly"
       [placeholder]="placeholder"
-      ngbDatepicker #d="ngbDatepicker" [placement]="'button'" [positionTarget]="buttonEl" (dateSelect)="dateSelect()"/>
-    <ng-content select="[append]"></ng-content>
-    <button #buttonEl class="btn btn-outline-secondary" (click)="d.toggle()">
+      ngbDatepicker #d="ngbDatepicker" [placement]="'button'" [positionTarget]="buttonEl" (dateSelect)="dateSelect()" />
+    <button #buttonEl class="btn btn-outline-secondary" type="button" (click)="d.toggle()">
       <fa-icon help icon="calendar-day" title="Clique aqui para escolher uma data"></fa-icon>
     </button>
+    <ng-content select="[append]"></ng-content>
   </div>
   <invalid-feedback [control]="control"></invalid-feedback>
 </div>

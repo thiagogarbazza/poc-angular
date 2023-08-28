@@ -1,0 +1,18 @@
+<div class="pagination-container">
+  <ul class="pagination pagination-sm justify-content-end">
+    <li class="page-item disabled" [ngClass]="{'disabled': !hasPrevious}">
+      <button *ngIf="hasPrevious" type="button" class="page-link" (click)="changePage(previous)">Previous</button>
+      <span *ngIf="!hasPrevious" class="page-link">Previous</span>
+    </li>
+
+    <li class="page-item" [ngClass]="{'active': i.active}" *ngFor="let i of pages">
+      <button *ngIf="i.link" class="page-link" (click)="changePage(i.id)">{{i.description}}</button>
+      <span *ngIf="!i.link" class="page-link">{{i.description}}</span>
+    </li>
+
+    <li class="page-item disabled" [ngClass]="{'disabled': !hasNext}">
+      <button *ngIf="hasNext" class="page-link" (click)="changePage(next)">Next</button>
+      <span *ngIf="!hasNext" class="page-link">Next</span>
+    </li>
+  </ul>
+</div>

@@ -15,7 +15,8 @@
       [ngClass]="{'is-invalid': isInvalid(), 'is-valid': isValid()}"
       [readonly]="readonly"
       [placeholder]="placeholder"
-      [items]="items" bindLabel="description" [multiple]="multiple">
+      [items]="items" bindLabel="description" [multiple]="multiple"
+      [trackByFn]="trackByFn">
     </ng-select>
     <ng-content select="[append]"></ng-content>
   </div>

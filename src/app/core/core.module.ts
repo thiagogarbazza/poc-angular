@@ -9,6 +9,9 @@ import { NgbDateAdapter, NgbDateParserFormatter, NgbDatepickerConfig, NgbDatepic
 import { NgSelectConfig, NgSelectModule } from '@ng-select/ng-select';
 import { QuillModule } from 'ngx-quill'
 
+
+import { DataGridSortDirective } from './components/data-grid/data-grid-sort.directive';
+import { DataGridComponent } from '@app-core/components/data-grid/data-grid.component';
 import { InputCheckboxComponent } from '@app-core/components//input-fields/input-checkbox/input-checkbox.component';
 import { InputCodeEditorComponent } from '@app-core/components//input-fields/input-code-editor/input-code-editor.component';
 import { InputDateComponent } from '@app-core/components//input-fields/input-date/input-date.component';
@@ -26,9 +29,11 @@ import { InputTextEditorComponent } from '@app-core/components//input-fields/inp
 import { InputUrlComponent } from '@app-core/components//input-fields/input-url/input-url.component';
 import { InvalidFeedbackComponent } from '@app-core/components//invalid-feedback/invalid-feedback.component';
 import { OutputCodeComponent } from '@app-core/components/output-fields/output-code/output-code.component';
-import { OutputTextComponent } from '@app-core/components//output-fields/output-text/output-text.component';
+import { OutputTextComponent } from '@app-core/components/output-fields/output-text/output-text.component';
+import { PaginationComponent } from '@app-core/components/pagination/pagination.component';
 
 const COMPONENTS = [
+  DataGridComponent,
   InputCheckboxComponent,
   InputCodeEditorComponent,
   InputDateComponent,
@@ -46,6 +51,11 @@ const COMPONENTS = [
   InvalidFeedbackComponent,
   OutputCodeComponent,
   OutputTextComponent,
+  PaginationComponent
+];
+
+const DIRECTIVES = [
+  DataGridSortDirective
 ];
 
 const MODULES = [
@@ -54,7 +64,8 @@ const MODULES = [
 
 @NgModule({
   declarations: [
-    ...COMPONENTS
+    ...COMPONENTS,
+    ...DIRECTIVES,
   ],
   imports: [
     CommonModule,
@@ -72,8 +83,9 @@ const MODULES = [
     ReactiveFormsModule,
     FontAwesomeModule,
     MonacoEditorModule,
+    ...COMPONENTS,
+    ...DIRECTIVES
     //...MODULES
-    ...COMPONENTS
   ],
   providers: [
     {provide: NgbDateAdapter        , useClass: CustomAdapter},

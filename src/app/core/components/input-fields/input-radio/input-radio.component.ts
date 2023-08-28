@@ -2,7 +2,7 @@ import { Component, ElementRef, forwardRef, Input, ViewChild } from '@angular/co
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { AbstractInputField } from '@app-core/components/input-fields/abstract-input-field';
-import SelectableItem from '@app-core/service/selectable-item';
+import { SelectableItem } from '@app/core/models/selectable-item';
 
 @Component({
   selector: 'input-radio',
@@ -16,7 +16,7 @@ import SelectableItem from '@app-core/service/selectable-item';
 })
 export class InputRadioComponent extends AbstractInputField {
 
-  @Input() items: Array<SelectableItem<string>>;
+  @Input() items: SelectableItem<string>[];
   @Input() reverse: boolean = false;
   @Input() inline: boolean = true;
   @ViewChild('input') input: ElementRef;
