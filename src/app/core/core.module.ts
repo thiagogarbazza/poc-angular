@@ -9,7 +9,6 @@ import { NgbDateAdapter, NgbDateParserFormatter, NgbDatepickerConfig, NgbDatepic
 import { NgSelectConfig, NgSelectModule } from '@ng-select/ng-select';
 import { QuillModule } from 'ngx-quill'
 
-
 import { DataGridSortDirective } from './components/data-grid/data-grid-sort.directive';
 import { DataGridComponent } from '@app-core/components/data-grid/data-grid.component';
 import { InputCheckboxComponent } from '@app-core/components//input-fields/input-checkbox/input-checkbox.component';
@@ -31,6 +30,8 @@ import { InvalidFeedbackComponent } from '@app-core/components//invalid-feedback
 import { OutputCodeComponent } from '@app-core/components/output-fields/output-code/output-code.component';
 import { OutputTextComponent } from '@app-core/components/output-fields/output-text/output-text.component';
 import { PaginationComponent } from '@app-core/components/pagination/pagination.component';
+import { ModalConfirmComponent } from './components/modals/modal-confirm/modal-confirm.component';
+import { ModalConfirmService } from './components/modals/modal-confirm/modal-confirm.service';
 
 const COMPONENTS = [
   DataGridComponent,
@@ -49,6 +50,7 @@ const COMPONENTS = [
   InputTextEditorComponent,
   InputUrlComponent,
   InvalidFeedbackComponent,
+  ModalConfirmComponent,
   OutputCodeComponent,
   OutputTextComponent,
   PaginationComponent
@@ -62,10 +64,14 @@ const MODULES = [
 
 ];
 
+const SERVICES = [
+  ModalConfirmService
+];
+
 @NgModule({
   declarations: [
     ...COMPONENTS,
-    ...DIRECTIVES,
+    ...DIRECTIVES
   ],
   imports: [
     CommonModule,
@@ -89,7 +95,8 @@ const MODULES = [
   ],
   providers: [
     {provide: NgbDateAdapter        , useClass: CustomAdapter},
-    {provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter}
+    {provide: NgbDateParserFormatter, useClass: CustomDateParserFormatter},
+    ...SERVICES
   ]
 })
 export class CoreModule {

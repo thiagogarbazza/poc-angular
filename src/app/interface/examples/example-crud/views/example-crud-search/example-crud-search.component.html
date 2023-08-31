@@ -55,7 +55,7 @@
                 <td>{{ i.type }}</td>
                 <td>
                   <div class="toolbar-col">
-                    <button *ngIf="i.actions.canDelete" (click)="delete(i.id)" type="button" class="btn btn-outline-danger btn-sm"  title="Clique aqui para deletar este registro." ><fa-icon icon="trash"></fa-icon></button>
+                    <button *ngIf="i.actions.canDelete" (click)="delete(i)" type="button" class="btn btn-outline-danger btn-sm"  title="Clique aqui para deletar este registro." ><fa-icon icon="trash"></fa-icon></button>
                     <a *ngIf="i.actions.canUpdate" href="/examples/crud/{{i.id}}/update?b=search" type="button" class="btn btn-outline-primary btn-sm" title="Clique aqui para alterar este registro."><fa-icon icon="pen-to-square"></fa-icon></a>
                     <a *ngIf="i.actions.canDetail" [routerLink]="['/examples/crud', i.id]" type="button" class="btn btn-outline-primary btn-sm" title="Clique aqui para detalhar este registro."><fa-icon icon="eye"></fa-icon></a>
                   </div>

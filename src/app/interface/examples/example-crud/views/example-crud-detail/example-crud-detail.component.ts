@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { ModalConfirmService } from '@app/core/components/modals/modal-confirm/modal-confirm.service';
+
 import { ExampleCRUDDetailDTO } from '../../modules/example-crud-detail-dto';
 import { ExampleCRUDAPIService } from '../../services/example-crud-api.service';
 
@@ -13,7 +15,9 @@ export class ExampleCRUDDetailComponent implements OnInit {
 
   public item: ExampleCRUDDetailDTO
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private exampleCRUDAPIService: ExampleCRUDAPIService) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute, private exampleCRUDAPIService: ExampleCRUDAPIService,
+    private modalConfirmService: ModalConfirmService
+  ) { }
 
   ngOnInit(): void {
     this.item = this.activatedRoute.snapshot.data['item'];
@@ -24,8 +28,10 @@ export class ExampleCRUDDetailComponent implements OnInit {
   }
 
   delete(): void {
-    this.exampleCRUDAPIService.delete(this.item.id).subscribe(response => {
-      alert('deletado' + this.item.id)
-    });
+    this.modalConfirmService.open({ title: `Exclusão do registro ${this.item.code}`, message: `Confirma exclusão do registro ${this.item.code}?`}).subscribe(() =>
+      this.exampleCRUDAPIService.delete(this.item.id).subscribe(response => {
+        alert("Deletando: " + this.item.id)
+      })
+    );
   }
 }

@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 import { DataGridEventDTO } from '@app/core/components/data-grid/data-grid-event-dto';
+import { ModalConfirmService } from '@app/core/components/modals/modal-confirm/modal-confirm.service';
 import { AbstractSearchFilter } from '@app/core/models/abstract-search-filter';
 import { Converters } from '@app/core/utils/converters';
 
@@ -23,7 +24,9 @@ export class ExampleCRUDSearchComponent implements OnInit {
   public formGroup: FormGroup;
   public result: Page<ExampleCRUDSearchResultDTO>;
 
-  constructor(private activatedRoute: ActivatedRoute, private formBuilder: FormBuilder, private exampleCRUDAPIService: ExampleCRUDAPIService) { }
+  constructor(private activatedRoute: ActivatedRoute, private formBuilder: FormBuilder, private exampleCRUDAPIService: ExampleCRUDAPIService,
+    private modalConfirmService: ModalConfirmService
+  ) { }
 
   ngOnInit(): void {
     const item = this.activatedRoute.snapshot.data['item'];
@@ -37,10 +40,12 @@ export class ExampleCRUDSearchComponent implements OnInit {
     this.formGroup.reset();
   }
 
-  public delete(id: string) {
-    this.exampleCRUDAPIService.delete(id).subscribe(response => {
-      alert("Deletando component: " + id)
-    });
+  public delete(item: ExampleCRUDSearchResultDTO) {
+    this.modalConfirmService.open({ title: `Exclusão do registro ${item.code}`, message: `Confirma exclusão do registro ${item.code}?`}).subscribe(() =>
+      this.exampleCRUDAPIService.delete(item.id).subscribe(response => {
+        alert("Deletando component: " + item.id)
+      })
+    );
   }
 
   public onChangeDataGrid(dataGrid: DataGridEventDTO) {
