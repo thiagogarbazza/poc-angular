@@ -1,23 +1,26 @@
 <section class="notifications" *ngIf="notification" id="feedback_{{target}}">
-  <div class="alert alert-danger alert-dismissible" role="alert" *ngIf="notification.dangers && notification.dangers.length > 0">
+  <div class="alert alert-danger alert-dismissible fade show" role="alert" *ngIf="notification.dangers && notification.dangers.length > 0">
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="clear();"></button>
     <ul *ngFor="let n of notification.dangers">
       <li>{{n}}</li>
     </ul>
   </div>
-  <div class="alert alert-info alert-dismissible" role="alert" *ngIf="notification.infos && notification.infos.length > 0">
+
+  <div class="alert alert-info alert-dismissible fade show" role="alert" *ngIf="notification.infos && notification.infos.length > 0">
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="clear();"></button>
     <ul *ngFor="let n of notification.infos">
       <li>{{n}}</li>
     </ul>
   </div>
-  <div class="alert alert-success alert-dismissible" role="alert" *ngIf="notification.successes && notification.successes.length > 0">
+
+  <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="notification.successes && notification.successes.length > 0">
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="clear();"></button>
     <ul *ngFor="let n of notification.successes">
       <li>{{n}}</li>
     </ul>
   </div>
-  <div class="alert alert-warning alert-dismissible" role="alert" *ngIf="notification.warnings && notification.warnings.length > 0">
+
+  <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="notification.warnings && notification.warnings.length > 0">
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="clear();"></button>
     <ul *ngFor="let n of notification.warnings">
       <li>{{n}}</li>
