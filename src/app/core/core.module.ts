@@ -32,6 +32,8 @@ import { OutputTextComponent } from '@app-core/components/output-fields/output-t
 import { PaginationComponent } from '@app-core/components/pagination/pagination.component';
 import { ModalConfirmComponent } from './components/modals/modal-confirm/modal-confirm.component';
 import { ModalConfirmService } from './components/modals/modal-confirm/modal-confirm.service';
+import { NotificationsComponent } from './components/notifications/notifications.component';
+import { NotificationsService } from './components/notifications/notifications.service';
 
 const COMPONENTS = [
   DataGridComponent,
@@ -51,6 +53,7 @@ const COMPONENTS = [
   InputUrlComponent,
   InvalidFeedbackComponent,
   ModalConfirmComponent,
+  NotificationsComponent,
   OutputCodeComponent,
   OutputTextComponent,
   PaginationComponent
@@ -65,7 +68,8 @@ const MODULES = [
 ];
 
 const SERVICES = [
-  ModalConfirmService
+  ModalConfirmService,
+  NotificationsService
 ];
 
 @NgModule({

@@ -12,6 +12,7 @@ import { ExampleCRUDForSearchDTODataToBuildForm, ExampleCRUDForSearchDTOFormData
 import { ExampleCRUDSearchFilter } from '../../modules/example-crud-search-filter';
 import { Page } from '@app/core/models/page';
 import { ExampleCRUDSearchResultDTO } from '../../modules/example-crud-search-result-dto';
+import { NotificationsService } from '@app/core/components/notifications/notifications.service';
 
 @Component({
   selector: 'app-example-crud-search',
@@ -25,7 +26,7 @@ export class ExampleCRUDSearchComponent implements OnInit {
   public result: Page<ExampleCRUDSearchResultDTO>;
 
   constructor(private activatedRoute: ActivatedRoute, private formBuilder: FormBuilder, private exampleCRUDAPIService: ExampleCRUDAPIService,
-    private modalConfirmService: ModalConfirmService
+    private modalConfirmService: ModalConfirmService, private notificationsService: NotificationsService
   ) { }
 
   ngOnInit(): void {
@@ -43,7 +44,7 @@ export class ExampleCRUDSearchComponent implements OnInit {
   public delete(item: ExampleCRUDSearchResultDTO) {
     this.modalConfirmService.open({ title: `Exclusão do registro ${item.code}`, message: `Confirma exclusão do registro ${item.code}?`}).subscribe(() =>
       this.exampleCRUDAPIService.delete(item.id).subscribe(response => {
-        alert("Deletando component: " + item.id)
+        this.notificationsService.success(`Registro ${item.code} deletado com sucesso.`);
       })
     );
   }
