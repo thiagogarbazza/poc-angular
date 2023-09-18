@@ -34,9 +34,11 @@ import { ModalConfirmComponent } from './components/modals/modal-confirm/modal-c
 import { ModalConfirmService } from './components/modals/modal-confirm/modal-confirm.service';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { NotificationsService } from './components/notifications/notifications.service';
+import { FormInfoFieldsRequiredComponent } from './components/form-info-fields-required/form-info-fields-required.component';
 
 const COMPONENTS = [
   DataGridComponent,
+  FormInfoFieldsRequiredComponent,
   InputCheckboxComponent,
   InputCodeEditorComponent,
   InputDateComponent,

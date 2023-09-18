@@ -1,5 +1,9 @@
 import { Directive, Input, OnInit } from "@angular/core";
-import { AbstractControl, ControlContainer, ControlValueAccessor } from "@angular/forms";
+import { ControlContainer, ControlValueAccessor } from "@angular/forms";
+
+import { FormControlUtils } from "@app/core/utils/form-control-utils";
+
+
 
 @Directive()
 export abstract class AbstractInputField implements ControlValueAccessor, OnInit {
@@ -27,7 +31,7 @@ export abstract class AbstractInputField implements ControlValueAccessor, OnInit
   ngOnInit() {
     this.formGroup = this.controlContainer.control;
     this.control = this.formGroup.get(this.formControlName);
-    this.isRequired = this.checkRequired(this.control);
+    this.isRequired = FormControlUtils.isRequired(this.control);
   }
 
   registerOnChange(fn: any): void {
@@ -47,13 +51,5 @@ export abstract class AbstractInputField implements ControlValueAccessor, OnInit
     if(newValue != this.control.value) {
       this.control.value = newValue;
     }
-  }
-
-  private checkRequired(control: AbstractControl): boolean {
-    if(!control.validator) {
-      return false;
-    }
-    const validators = control.validator({} as AbstractControl);
-    return validators && validators['required'];
   }
 }
