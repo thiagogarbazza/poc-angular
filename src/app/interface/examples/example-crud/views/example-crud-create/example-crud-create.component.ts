@@ -48,7 +48,7 @@ export class ExampleCRUDCreateComponent implements OnInit {
       active: new FormControl(formData.active, [Validators.required]),
       scale: new FormControl(formData.scale, [Validators.required]),
       type: new FormControl(formData.type, [Validators.required]),
-      observation: new FormControl(formData.observation, []),
+      observation: new FormControl(formData.observation, [Validators.maxLength(1000)]),
     });
   }
 

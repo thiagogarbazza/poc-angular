@@ -9,4 +9,9 @@ export class FormControlUtils {
     const validators = control.validator({} as AbstractControl);
     return validators && validators['required'];
   }
+
+  public static maxLength(control: AbstractControl): number {
+
+    return 0;
+  }
 }
