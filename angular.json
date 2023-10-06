@@ -28,7 +28,11 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              { "glob": "**/*", "input": "node_modules/monaco-editor", "output": "/assets/monaco/" }
+              {
+                "glob": "**/*",
+                "input": "node_modules/monaco-editor",
+                "output": "/assets/monaco/"
+              }
             ],
             "styles": [
               "src/styles.scss"
@@ -100,11 +104,23 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "a14cac84-8653-4091-a336-4a4346a4a807"
+    "analytics": "a14cac84-8653-4091-a336-4a4346a4a807",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
