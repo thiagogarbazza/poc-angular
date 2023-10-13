@@ -1,1 +1,48 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap';
+
+
+.btn-soft-secondary {
+  --bs-btn-color: #141824;
+  --bs-btn-bg: #f5f7fa;
+  --bs-btn-border-color: #f5f7fa;
+  --bs-btn-hover-color: #141824;
+  --bs-btn-hover-bg: #e3e6ed;
+  --bs-btn-hover-border-color: #f6f8fb;
+  --bs-btn-focus-shadow-rgb: 211, 214, 218;
+  --bs-btn-active-color: #000000;
+  --bs-btn-active-bg: #f7f9fb;
+  --bs-btn-active-border-color: #f6f8fb;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0);
+  --bs-btn-disabled-color: #000000;
+  --bs-btn-disabled-bg: #f5f7fa;
+  --bs-btn-disabled-border-color: #f5f7fa;
+}
+
+.dropdown-toggle-no-icon::after {
+  display: none !important;
+}
+
+.dropdown-caret::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #000000;
+  top: -5px;
+  left: 1.5rem;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: #FFFFFF;
+  background: inherit;
+  border-top-left-radius: 0.25rem;
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: #cbd0dd;
+}
+
+.dropdown-caret-end::after {
+  right: 1rem;
+  left: auto;
+}

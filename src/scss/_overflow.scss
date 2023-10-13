@@ -1,0 +1,23 @@
+.overflow-auto {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    visibility: hidden;
+    -webkit-appearance: none;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    visibility: hidden;
+    border-radius: 3px;
+    background-color: rgba(159, 166, 188, 0.55);
+  }
+
+  &:hover::-webkit-scrollbar,
+  &:hover::-webkit-scrollbar-thumb,
+  &:focus::-webkit-scrollbar-thumb {
+    visibility: visible;
+  }
+}
