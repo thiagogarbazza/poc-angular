@@ -1,8 +1,13 @@
+.app-header {
+  background-color: var(--app-header-background-color);
+  border-bottom: var(--bs-border-color-translucent) var(--bs-border-width) solid;
+}
+
 .nav-end {
-  --theme-control-toggle-bg: rgba(255, 204, 133, 0.24);
-  --theme-control-toggle-hover-bg: #e5780b;
-  --theme-control-toggle-color: #e5780b;
-  --theme-control-toggle-hover-color: #fff6e0;
+  --theme-switcher-toggle-bg: rgba(255, 204, 133, 0.24);
+  --theme-switcher-toggle-hover-bg: #e5780b;
+  --theme-switcher-toggle-color: #e5780b;
+  --theme-switcher-toggle-hover-color: #fff6e0;
 
   margin-right: 0.5rem;
 
@@ -14,7 +19,7 @@
     align-items: center;
     gap: 1rem;
 
-    .theme-control {
+    .theme-switcher {
       width: 40px;
       height: 40px;
       display: flex;
@@ -24,13 +29,13 @@
       align-items: center;
       border: 0;
       border-radius: 50%;
-      background-color: var(--theme-control-toggle-bg);
-      color: var(--theme-control-toggle-color);
+      background-color: var(--theme-switcher-toggle-bg);
+      color: var(--theme-switcher-toggle-color);
     }
 
-    .theme-control:hover {
-      background-color: var(--theme-control-toggle-hover-bg);
-      color: var(--theme-control-toggle-hover-color);
+    .theme-switcher:hover {
+      background-color: var(--theme-switcher-toggle-hover-bg);
+      color: var(--theme-switcher-toggle-hover-color);
     }
 
     .other-systems {
@@ -98,7 +103,6 @@
       color: var(--bs-body-color);
 
       &:hover {
-
       }
 
       img {
