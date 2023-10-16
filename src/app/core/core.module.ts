@@ -35,6 +35,7 @@ import { ModalConfirmService } from './components/modals/modal-confirm/modal-con
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { NotificationsService } from './components/notifications/notifications.service';
 import { FormInfoFieldsRequiredComponent } from './components/form-info-fields-required/form-info-fields-required.component';
+import { LocalStorageService } from '@app-core/services/local-storage.service';
 
 const COMPONENTS = [
   DataGridComponent,
@@ -70,6 +71,7 @@ const MODULES = [
 ];
 
 const SERVICES = [
+  LocalStorageService,
   ModalConfirmService,
   NotificationsService
 ];
